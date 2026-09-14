@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A personal IELTS study archive for working toward Band 7.0."
+    />
+    <meta name="theme-color" content="#f7f1e8" />
+    <title>IELTS Study Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <a class="brand" href="#/home" aria-label="IELTS Study Archive home">
+          <span class="brand-mark" aria-hidden="true">IA</span>
+          <span>
+            <strong>IELTS Archive</strong>
+            <small>Personal study space</small>
+          </span>
+        </a>
+
+        <nav id="navigation" class="navigation"></nav>
+
+        <div class="target-card">
+          <span class="eyebrow">Target score</span>
+          <strong>Band 7.0</strong>
+          <div class="progress-track" aria-label="Target Band 7.0 out of 9">
+            <span style="width: 77.8%"></span>
+          </div>
+          <small>Steady practice, one note at a time.</small>
+        </div>
+      </aside>
+
+      <main id="app" class="main-content" tabindex="-1"></main>
+    </div>
+
+    <noscript>This archive needs JavaScript enabled to display its content.</noscript>
+    <script src="data/content.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
