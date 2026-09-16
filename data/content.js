@@ -44,6 +44,34 @@ window.IELTS_CONTENT = {
         question: "Where do you like to go on holiday?",
         answer: "I usually like to travel abroad, somewhere where no one knows me. I spend most of my time talking to people because of my job, so when I’m on holiday, I just want to get away from everything for a while. It gives me a real sense of freedom.",
       },
+      {
+        question: "What do you usually do in the evenings?",
+        answer: "I only have a little free time in the evenings, so I usually spend it reading or sometimes cooking. Both help me relax after a long day at work.",
+      },
+      {
+        question: "Do you prefer mornings or evenings?",
+        answer: "I definitely prefer evenings because mornings feel rushed and the traffic is stressful. In the evening, I can finally slow down and enjoy some free time.",
+      },
+      {
+        question: "What do you usually do on your day off?",
+        answer: "I usually spend my day off reading books, especially books on theology and the humanities. I also enjoy cooking sometimes because it helps me relax.",
+      },
+      {
+        question: "What kind of videos do you like to watch?",
+        answer: "I like watching documentaries about the universe and ancient history. I find them really interesting because I enjoy learning about things that are very different from my everyday life.",
+      },
+      {
+        question: "How often do you cook?",
+        answer: "I cook almost every morning because I’m a father of three, and I usually prepare breakfast for my children. I actually enjoy cooking, even though mornings can be pretty busy.",
+      },
+      {
+        question: "What’s one thing you wish you had more time for?",
+        answer: "I wish I had more time to study English and theology because I’m preparing to study abroad. But I’m busy with church almost every day, so I don’t get as much study time as I’d like.",
+      },
+      {
+        question: "Why do you think people have hobbies?",
+        answer: "I think having hobbies is almost instinctive. We naturally need things that give us joy and help us relax, especially when life gets busy.",
+      },
     ],
   },
 
