@@ -158,6 +158,33 @@ h1, h2 { margin: 0; font-family: "Fraunces", serif; }
 .writing-model[open] .writing-model-toggle { transform: rotate(45deg); }
 .writing-model-body { padding: 4px 24px 24px 78px; border-top: 1px solid var(--line); }
 .writing-model-body p { max-width: 78ch; margin: 18px 0 0; color: #526158; font-size: 14px; line-height: 1.8; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.review-empty, .review-content { padding: 26px; }
+.review-empty { border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+.review-empty > p, .review-caption { margin: 0 0 18px; color: #526158; font-size: 14px; line-height: 1.7; }
+.review-content h3 { margin: 30px 0 12px; font-size: 18px; }
+.review-content h3:first-child { margin-top: 0; }
+.pen-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(180px, 1fr); gap: 24px; margin-top: 14px; }
+.pen-paper { padding: 18px 22px; border: 1px solid var(--line); border-radius: 12px; background: #fffefa; font-family: Georgia, serif; font-size: 17px; line-height: 2.2; overflow-wrap: anywhere; }
+.pen-paper p { margin: 0 0 18px; }
+.pen-paper p:last-child { margin-bottom: 0; }
+.pen-edit del { color: #965050; text-decoration-color: #b5262d; text-decoration-thickness: 2px; }
+.pen-edit ins { color: #a51f29; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; font-style: italic; }
+.pen-reference { display: inline-block; margin-left: 5px; padding: 0 5px; color: #a51f29; font: 700 11px/1.7 "DM Sans", sans-serif; border: 1px solid #d8a4a4; border-radius: 50%; vertical-align: super; }
+.pen-notes { margin: 0; padding-left: 22px; color: #a51f29; font-size: 13px; line-height: 1.6; }
+.pen-notes li { margin-bottom: 15px; padding: 8px; border-left: 2px solid #e7b6b6; }
+.pen-notes p { margin: 4px 0; }
+.pen-notes a { text-decoration: underline; font-size: 11px; }
+.pen-category { color: #a51f29; font-size: 11px; font-weight: 700; }
+.pen-reference:focus-visible, .pen-notes li:focus { outline: 2px solid #a51f29; outline-offset: 3px; }
+.review-original { margin-top: 18px; color: #526158; font-size: 14px; line-height: 1.8; }
+.writing-review .review-original > summary { display: list-item; list-style: disclosure-closed inside; padding: 8px 0; font-weight: 600; }
+.writing-review .review-original[open] > summary { list-style-type: disclosure-open; }
+.review-model { padding: 6px 22px; border-radius: 12px; background: var(--sage); font-size: 15px; line-height: 1.8; }
+.review-phrases { display: grid; gap: 12px; }
+.review-phrases article { padding: 15px 18px; border: 1px solid var(--line); border-radius: 12px; }
+.review-phrases p { margin: 6px 0 0; color: #526158; font-size: 13px; line-height: 1.6; }
+@media (max-width: 1000px) { .pen-layout { grid-template-columns: 1fr; gap: 16px; } }
 
 .listening-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 18px; margin-top: 28px; }
 .score-card, .note-card, .confusion-card { padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }

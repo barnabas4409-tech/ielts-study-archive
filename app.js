@@ -152,6 +152,58 @@
     return `${pageHeader("Study section", section.title, section.description)}<div class="starter-grid">${cards}</div>`;
   }
 
+  function escapeText(value) {
+    return String(value).replace(/[&<>"']/g, (character) => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+    })[character]);
+  }
+
+  function renderMarkedDraft(paragraphs, id) {
+    const notes = [];
+    const marked = paragraphs.map((segments) => `<p>${segments.map((segment) => {
+      if (typeof segment === "string") return escapeText(segment);
+      const number = notes.push(segment);
+      return `<span class="pen-edit"><span class="sr-only">원문: </span><del>${escapeText(segment.original)}</del> <span class="sr-only">수정: </span><ins>${escapeText(segment.replacement)}</ins><a class="pen-reference" id="${id}-mark-${number}" href="#${id}-note-${number}" data-review-anchor="${id}-note-${number}" aria-label="첨삭 이유 ${number} 보기">${number}</a></span>`;
+    }).join("")}</p>`).join("");
+    return `<div class="pen-layout"><div class="pen-paper" lang="en">${marked}</div><ol class="pen-notes">${notes.map((note, index) => `<li id="${id}-note-${index + 1}" tabindex="-1"><span class="pen-category">${escapeText(note.category || "수정 제안")}</span><p>${escapeText(note.reason)}</p><a href="#${id}-mark-${index + 1}" data-review-anchor="${id}-mark-${index + 1}">원문 위치로 ↩</a></li>`).join("")}</ol></div>`;
+  }
+
+  function renderWritingReviews(section) {
+    const reviews = section.reviews.map((review, index) => {
+      const id = `review-${index}`;
+      const original = review.paragraphs.map((segments) => `<p>${segments.map((segment) => escapeText(typeof segment === "string" ? segment : segment.original)).join("")}</p>`).join("");
+      return `<details class="writing-model writing-review">
+        <summary><span class="writing-model-number">${String(index + 1).padStart(2, "0")}</span><span class="writing-model-title"><small>${escapeText(review.task)}</small><strong>${escapeText(review.title)}</strong></span><span class="writing-model-toggle" aria-hidden="true">+</span></summary>
+        <div class="review-content">
+          <h3>01 · 빨간펜 첨삭</h3>
+          <p class="review-caption">취소선은 원문, 빨간 밑줄은 수정 제안입니다. 번호를 누르면 이유를 볼 수 있어요.</p>
+          ${renderMarkedDraft(review.paragraphs, id)}
+          <details class="review-original"><summary>원문만 보기</summary><div lang="en">${original}</div></details>
+          <h3>02 · Band 7.0 목표 답안</h3>
+          <div class="review-model" lang="en">${review.model.map((paragraph) => `<p>${escapeText(paragraph)}</p>`).join("")}</div>
+          <h3>03 · 이번 글에서 가져갈 표현</h3>
+          <div class="review-phrases">${review.expressions.map((expression) => `<article><strong lang="en">${escapeText(expression.phrase)}</strong><p>${escapeText(expression.meaning)}</p><p lang="en">${escapeText(expression.example)}</p></article>`).join("")}</div>
+        </div>
+      </details>`;
+    }).join("");
+    return `<section class="section-block" aria-labelledby="writing-reviews-heading">
+      <div class="section-heading"><div><span class="eyebrow">My writing · feedback</span><h2 id="writing-reviews-heading">내 답안 첨삭</h2></div><span class="section-count">${section.reviews.length} reviews</span></div>
+      ${reviews || `<div class="review-empty"><p>직접 쓴 답안을 이 대화에 보내주세요. 빨간펜 첨삭 → Band 7.0 목표 답안 → 핵심 표현 순서로 이곳에 정리합니다.</p><span class="pen-category">표시 예시 · 실제 제출 답안 아님</span>${renderMarkedDraft([section.reviewPreview], "review-preview")}</div>`}
+    </section>`;
+  }
+
+  // Annotation links stay within the current hash route instead of triggering navigation.
+  app.addEventListener("click", (event) => {
+    const link = event.target.closest("[data-review-anchor]");
+    if (!link) return;
+    event.preventDefault();
+    const target = document.getElementById(link.dataset.reviewAnchor);
+    if (target) {
+      target.scrollIntoView({ block: "center" });
+      target.focus({ preventScroll: true });
+    }
+  });
+
   function renderWriting() {
     const section = content.writing;
     const tasks = section.tasks
@@ -182,6 +234,7 @@
 
     return `
       ${pageHeader("Writing essentials", section.title, section.description)}
+      ${renderWritingReviews(section)}
       <div class="writing-principle">${section.principle}</div>
       <div class="writing-grid">${tasks}</div>
       <p class="writing-routine"><strong>Practice:</strong> ${section.routine}</p>

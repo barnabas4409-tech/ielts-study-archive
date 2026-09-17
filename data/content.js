@@ -110,6 +110,12 @@ window.IELTS_CONTENT = {
     title: "Writing",
     description: "Simple, clear, accurate writing for Band 7.0.",
     principle: "Accuracy first, complexity second. Learn useful chunks, not whole model answers.",
+    reviewPreview: [
+      "Many people ",
+      { original: "uses", replacement: "use", category: "문법", reason: "주어 people은 복수이므로 use를 씁니다." },
+      " online courses.",
+    ],
+    reviews: [],
     tasks: [
       {
         title: "Task 1 · Charts",
