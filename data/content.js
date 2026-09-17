@@ -73,6 +73,37 @@ window.IELTS_CONTENT = {
         answer: "I think having hobbies is almost instinctive. We naturally need things that give us joy and help us relax, especially when life gets busy.",
       },
     ],
+    // Practice ideas are kept separate from the finalized Part 1 answers above.
+    practiceNotes: [
+      {
+        topic: "More quiet time",
+        answer: "Definitely. I work as a pastor at a church, so I don't get enough quiet time during the day. I'd like to have more time in the evenings to relax and recharge.",
+      },
+      {
+        topic: "Rainy weather",
+        answer: "I actually like rainy weather because it gives me a sense of peace. Some people find it gloomy, but I find it quite relaxing. I especially like having coffee and listening to jazz when it's raining.",
+      },
+      {
+        topic: "Weather and plans",
+        answer: "I sometimes adjust my plans because of the weather, but it's not a big factor for me. Unless the weather is extreme, I usually stick to my plans. Actually, unexpected weather can sometimes make the day more interesting.",
+      },
+      {
+        topic: "Spending time alone",
+        answer: "I usually prefer spending my free time alone. As a pastor, I meet a lot of people every day, so when I have some free time, I enjoy having some quiet time by myself.",
+      },
+      {
+        topic: "Things I do alone",
+        answer: "I usually read books, watch documentaries, or cook something. Reading gives me space to think, while cooking helps me relax.",
+      },
+      {
+        topic: "Feeling lonely",
+        answer: "Sometimes I feel a bit lonely, but I don't really mind it. Being alone gives me space to think, and I actually value that quiet time.",
+      },
+      {
+        topic: "Enjoying cooking",
+        answer: "Yes, I really enjoy cooking. I especially like making soup because I find the sound of it bubbling quite relaxing. It's a small thing, but it makes me happy.",
+      },
+    ],
   },
 
   writing: {
@@ -113,7 +144,52 @@ window.IELTS_CONTENT = {
       "be there for someone",
       "go through a difficult time",
       "get away from everything",
-      "It gives me a sense of ~",
+      "It gives me a sense of + noun",
+      "mornings feel rushed",
+      "spend my free time + -ing",
+      "watch videos about + topic",
+      "enjoy some free time",
+      "I don't get enough quiet time",
+      "relax and recharge",
+      "have some quiet time by myself",
+      "give me space to think",
+      "a bit + adjective",
+      "adjust my plans",
+      "it's not a big factor",
+      "stick to my plans",
+      "unless the weather is extreme",
+      "those little surprises",
+      "I value that quiet time",
+      "the sound of it bubbling",
+      "It's a small thing, but…",
+      "prepare breakfast for someone",
+    ],
+    tips: [
+      {
+        title: "Feel + adjective",
+        example: "Mornings feel rushed. / Reading the Bible feels peaceful.",
+        note: "Use “Mornings feel rushed,” not “Morning is rushed.”",
+      },
+      {
+        title: "Find it + adjective",
+        example: "I find it relaxing. / I find the sound of soup bubbling quite relaxing.",
+        note: "For relaxation, say “It helps me relax” or “I find it relaxing,” not “It gives me a sense of relax.”",
+      },
+      {
+        title: "A sense of + noun",
+        example: "It gives me a sense of peace. / I feel a sense of peace. / I feel peaceful.",
+        note: "Do not say “It feels a sense of peace.” Other useful nouns: freedom, achievement.",
+      },
+      {
+        title: "A bit + adjective",
+        example: "a bit tired · a bit nervous · a bit lonely · a bit nostalgic · a bit gloomy",
+        note: "Not every combination sounds natural. Prefer “I’m a bit happier today” or “I feel pretty happy” to “It’s a bit happy.”",
+      },
+      {
+        title: "Useful natural phrasing",
+        example: "I prefer spending my free time alone. / I cook breakfast for my children.",
+        note: "Keep these concise. Avoid “I prefer to spend my free time being alone” and “I cook because for their breakfast.”",
+      },
     ],
   },
 

@@ -110,7 +110,27 @@
           </article>`,
       )
       .join("");
-    return `${pageHeader("Speaking notes", section.title, section.description)}<div class="answer-list">${cards}</div>`;
+    const practiceNotes = section.practiceNotes
+      .map(
+        (item) => `
+          <article class="practice-card">
+            <span class="part-label">Practice idea</span>
+            <h3>${item.topic}</h3>
+            <p>“${item.answer}”</p>
+          </article>`,
+      )
+      .join("");
+    return `
+      ${pageHeader("Speaking notes", section.title, section.description)}
+      <div class="answer-list">${cards}</div>
+      <section class="section-block" aria-labelledby="practice-heading">
+        <div class="section-heading">
+          <div><span class="eyebrow">More to practise</span><h2 id="practice-heading">Additional topic notes</h2></div>
+          <span class="section-count">${section.practiceNotes.length} ideas</span>
+        </div>
+        <p class="section-intro">These are practice ideas, separate from your finalized Part 1 answers.</p>
+        <div class="practice-grid">${practiceNotes}</div>
+      </section>`;
   }
 
   function renderStarter(route) {
@@ -168,7 +188,19 @@
             (item, index) => `<article><span>${String(index + 1).padStart(2, "0")}</span><h2>${item}</h2><small>Ready to use</small></article>`,
           )
           .join("")}
-      </div>`;
+      </div>
+      <section class="section-block" aria-labelledby="expression-tips-heading">
+        <div class="section-heading">
+          <div><span class="eyebrow">Usage notes</span><h2 id="expression-tips-heading">Natural ways to say it</h2></div>
+        </div>
+        <div class="tip-grid">
+          ${section.tips
+            .map(
+              (item) => `<article class="tip-card"><h3>${item.title}</h3><p class="tip-example">${item.example}</p><p>${item.note}</p></article>`,
+            )
+            .join("")}
+        </div>
+      </section>`;
   }
 
   function renderPronunciation() {
