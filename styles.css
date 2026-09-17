@@ -162,6 +162,10 @@ h1, h2 { margin: 0; font-family: "Fraunces", serif; }
 .review-empty, .review-content { padding: 26px; }
 .review-empty { border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
 .review-empty > p, .review-caption { margin: 0 0 18px; color: #526158; font-size: 14px; line-height: 1.7; }
+.review-prompt, .review-focus { margin-bottom: 18px; padding: 16px 20px; border-radius: 12px; background: var(--paper); }
+.review-prompt p, .review-focus p { margin: 7px 0 0; color: #526158; font-size: 14px; line-height: 1.65; }
+.review-focus { border-left: 3px solid var(--clay); }
+.review-focus strong { color: var(--forest-dark); font-size: 13px; }
 .review-content h3 { margin: 30px 0 12px; font-size: 18px; }
 .review-content h3:first-child { margin-top: 0; }
 .pen-layout { display: grid; grid-template-columns: minmax(0, 2fr) minmax(180px, 1fr); gap: 24px; margin-top: 14px; }

@@ -172,9 +172,11 @@
     const reviews = section.reviews.map((review, index) => {
       const id = `review-${index}`;
       const original = review.paragraphs.map((segments) => `<p>${segments.map((segment) => escapeText(typeof segment === "string" ? segment : segment.original)).join("")}</p>`).join("");
-      return `<details class="writing-model writing-review">
+      return `<details class="writing-model writing-review" ${index === 0 ? "open" : ""}>
         <summary><span class="writing-model-number">${String(index + 1).padStart(2, "0")}</span><span class="writing-model-title"><small>${escapeText(review.task)}</small><strong>${escapeText(review.title)}</strong></span><span class="writing-model-toggle" aria-hidden="true">+</span></summary>
         <div class="review-content">
+          ${review.prompt ? `<div class="review-prompt"><span class="eyebrow">Essay question</span><p lang="en">${escapeText(review.prompt)}</p></div>` : ""}
+          ${review.focus ? `<div class="review-focus"><strong>가장 중요한 피드백</strong><p>${escapeText(review.focus)}</p></div>` : ""}
           <h3>01 · 빨간펜 첨삭</h3>
           <p class="review-caption">취소선은 원문, 빨간 밑줄은 수정 제안입니다. 번호를 누르면 이유를 볼 수 있어요.</p>
           ${renderMarkedDraft(review.paragraphs, id)}
