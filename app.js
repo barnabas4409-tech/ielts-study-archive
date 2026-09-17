@@ -210,7 +210,14 @@
       <div class="expression-list">
         ${section.items
           .map(
-            (item, index) => `<article><span>${String(index + 1).padStart(2, "0")}</span><div><h2>${item}</h2>${section.examples[item] ? `<p class="expression-example">${section.examples[item]}</p>` : ""}</div><small>${section.examples[item] ? "Example" : "Ready to use"}</small></article>`,
+            (item, index) => `
+              <article>
+                <span>${String(index + 1).padStart(2, "0")}</span>
+                <div>
+                  <h2>${item}</h2>
+                  <ul class="expression-examples">${section.examples[item].map((example) => `<li>${example}</li>`).join("")}</ul>
+                </div>
+              </article>`,
           )
           .join("")}
       </div>
