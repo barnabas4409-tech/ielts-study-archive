@@ -163,7 +163,21 @@ window.IELTS_CONTENT = {
       "the sound of it bubbling",
       "It's a small thing, but…",
       "prepare breakfast for someone",
+      "remind me of + noun",
     ],
+    // Add a full sentence here when an existing phrase gets a new example.
+    examples: {
+      "I find it + adjective": "I find it quite relaxing.",
+      "It gives me a sense of + noun": "It gives me a sense of peace.",
+      "mornings feel rushed": "Mornings feel rushed.",
+      "I don't get enough quiet time": "I don't get enough quiet time.",
+      "relax and recharge": "I need some time to recharge.",
+      "give me space to think": "It gives me space to think.",
+      "a bit + adjective": "I feel peaceful and a bit nostalgic.",
+      "adjust my plans": "I sometimes adjust my plans.",
+      "it's not a big factor": "It's not a big factor for me.",
+      "remind me of + noun": "It reminds me of my university days.",
+    },
     tips: [
       {
         title: "Feel + adjective",
