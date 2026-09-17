@@ -76,31 +76,31 @@ window.IELTS_CONTENT = {
     // Practice ideas are kept separate from the finalized Part 1 answers above.
     practiceNotes: [
       {
-        topic: "More quiet time",
+        question: "Would you like to have more quiet time?",
         answer: "Definitely. I work as a pastor at a church, so I don't get enough quiet time during the day. I'd like to have more time in the evenings to relax and recharge.",
       },
       {
-        topic: "Rainy weather",
+        question: "Do you like rainy weather?",
         answer: "I actually like rainy weather because it gives me a sense of peace. Some people find it gloomy, but I find it quite relaxing. I especially like having coffee and listening to jazz when it's raining.",
       },
       {
-        topic: "Weather and plans",
+        question: "Does the weather affect your plans?",
         answer: "I sometimes adjust my plans because of the weather, but it's not a big factor for me. Unless the weather is extreme, I usually stick to my plans. Actually, unexpected weather can sometimes make the day more interesting.",
       },
       {
-        topic: "Spending time alone",
+        question: "Do you prefer spending your free time alone or with others?",
         answer: "I usually prefer spending my free time alone. As a pastor, I meet a lot of people every day, so when I have some free time, I enjoy having some quiet time by myself.",
       },
       {
-        topic: "Things I do alone",
+        question: "What do you usually do when you have time to yourself?",
         answer: "I usually read books, watch documentaries, or cook something. Reading gives me space to think, while cooking helps me relax.",
       },
       {
-        topic: "Feeling lonely",
+        question: "Do you ever feel lonely when you're alone?",
         answer: "Sometimes I feel a bit lonely, but I don't really mind it. Being alone gives me space to think, and I actually value that quiet time.",
       },
       {
-        topic: "Enjoying cooking",
+        question: "Do you enjoy cooking?",
         answer: "Yes, I really enjoy cooking. I especially like making soup because I find the sound of it bubbling quite relaxing. It's a small thing, but it makes me happy.",
       },
     ],

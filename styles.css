@@ -118,10 +118,10 @@ h1, h2 { margin: 0; font-family: "Fraunces", serif; }
 .answer-card h2 { margin: 5px 0 13px; font-size: 22px; }
 .answer-card p { margin: 0; color: #526158; font-size: 15px; line-height: 1.8; }
 .section-intro { margin: -6px 0 20px; color: var(--muted); font-size: 13px; line-height: 1.6; }
-.practice-grid, .tip-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
-.practice-card, .tip-card { padding: 26px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
-.practice-card h3, .tip-card h3 { margin: 7px 0 12px; font-family: "Fraunces", serif; font-size: 21px; }
-.practice-card p, .tip-card p { margin: 0; color: #526158; font-size: 14px; line-height: 1.75; }
+.tip-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+.tip-card { padding: 26px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+.tip-card h3 { margin: 7px 0 12px; font-family: "Fraunces", serif; font-size: 21px; }
+.tip-card p { margin: 0; color: #526158; font-size: 14px; line-height: 1.75; }
 .tip-card .tip-example { margin-bottom: 12px; color: var(--forest-dark); font-weight: 600; }
 
 .starter-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
@@ -195,7 +195,7 @@ h1, h2 { margin: 0; font-family: "Fraunces", serif; }
   .hero { min-height: auto; padding: 40px 28px; }
   .hero h1 { font-size: 40px; }
   .band-orbit { display: none; }
-  .skill-grid, .listening-layout, .pronunciation-grid, .practice-grid, .tip-grid, .writing-grid { grid-template-columns: 1fr; }
+  .skill-grid, .listening-layout, .pronunciation-grid, .tip-grid, .writing-grid { grid-template-columns: 1fr; }
   .focus-card { grid-template-columns: auto 1fr; }
   .focus-card > a { grid-column: 2; }
   .page-header { align-items: flex-start; }

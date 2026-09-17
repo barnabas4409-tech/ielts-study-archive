@@ -112,11 +112,14 @@
       .join("");
     const practiceNotes = section.practiceNotes
       .map(
-        (item) => `
-          <article class="practice-card">
-            <span class="part-label">Practice idea</span>
-            <h3>${item.topic}</h3>
-            <p>“${item.answer}”</p>
+        (item, index) => `
+          <article class="answer-card">
+            <div class="answer-number">${String(section.answers.length + index + 1).padStart(2, "0")}</div>
+            <div>
+              <span class="part-label">Part 1 · Additional practice</span>
+              <h2>${item.question}</h2>
+              <p>“${item.answer}”</p>
+            </div>
           </article>`,
       )
       .join("");
@@ -125,11 +128,11 @@
       <div class="answer-list">${cards}</div>
       <section class="section-block" aria-labelledby="practice-heading">
         <div class="section-heading">
-          <div><span class="eyebrow">More to practise</span><h2 id="practice-heading">Additional topic notes</h2></div>
-          <span class="section-count">${section.practiceNotes.length} ideas</span>
+          <div><span class="eyebrow">More to practise</span><h2 id="practice-heading">Additional Part 1 answers</h2></div>
+          <span class="section-count">${section.practiceNotes.length} answers</span>
         </div>
-        <p class="section-intro">These are practice ideas, separate from your finalized Part 1 answers.</p>
-        <div class="practice-grid">${practiceNotes}</div>
+        <p class="section-intro">Practice answers, separate from your finalized set above.</p>
+        <div class="answer-list">${practiceNotes}</div>
       </section>`;
   }
 
