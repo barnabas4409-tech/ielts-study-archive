@@ -166,12 +166,32 @@
           </article>`,
       )
       .join("");
+    const models = section.models
+      .map(
+        (model, index) => `
+          <details class="writing-model">
+            <summary>
+              <span class="writing-model-number">${String(index + 1).padStart(2, "0")}</span>
+              <span class="writing-model-title"><small>${model.task}</small><strong>${model.title}</strong></span>
+              <span class="writing-model-toggle" aria-hidden="true">+</span>
+            </summary>
+            <div class="writing-model-body">${model.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}</div>
+          </details>`,
+      )
+      .join("");
 
     return `
       ${pageHeader("Writing essentials", section.title, section.description)}
       <div class="writing-principle">${section.principle}</div>
       <div class="writing-grid">${tasks}</div>
-      <p class="writing-routine"><strong>Practice:</strong> ${section.routine}</p>`;
+      <p class="writing-routine"><strong>Practice:</strong> ${section.routine}</p>
+      <section class="section-block" aria-labelledby="writing-models-heading">
+        <div class="section-heading">
+          <div><span class="eyebrow">Saved answers</span><h2 id="writing-models-heading">Model answers</h2></div>
+          <span class="section-count">${section.models.length} answers</span>
+        </div>
+        <div class="writing-model-list">${models}</div>
+      </section>`;
   }
 
   function renderListening() {

@@ -135,6 +135,38 @@ window.IELTS_CONTENT = {
       },
     ],
     routine: "Timed draft (Task 1: 20 min · Task 2: 40 min) → check structure and accuracy → save 5–10 useful chunks.",
+    models: [
+      {
+        task: "Task 1",
+        title: "Online Activities in Great Britain, 2018",
+        paragraphs: [
+          "The bar chart shows the percentages of individuals in Great Britain who took part in various online activities in 2018.",
+          "Overall, sending and receiving emails was the most common online activity, while selling goods and services was the least common. Researching goods and services was also particularly popular, whereas playing or downloading games was relatively uncommon.",
+          "Around 84% of respondents sent or received emails, the highest figure on the chart. This was followed by researching goods and services, at approximately 78%. Online banking and social networking were also common, with figures of around 69% and 65%, respectively.",
+          "The percentages for watching online video content, listening to music, and watching streamed or catch-up TV were fairly similar, ranging from about 55% to 62%. By contrast, only around 32% of respondents played or downloaded games. Selling goods and services had the lowest figure, at approximately 25%.",
+        ],
+      },
+      {
+        task: "Task 1",
+        title: "Housing in England and Wales, 1918–2011",
+        paragraphs: [
+          "The chart compares the percentages of households living in owner-occupied homes, council-rented accommodation and privately rented housing between 1918 and 2011.",
+          "Overall, home ownership increased considerably over the period, whereas both council and private renting declined. Private renting was the most common form of housing in 1918, while ownership became the largest category by 2011.",
+          "The proportion of owner-occupied homes rose steadily from around 22% in 1918 to approximately 69% in 2001, before falling slightly to about 64% in 2011. In contrast, private renting declined substantially from roughly 76% to around 10% over the same period.",
+          "Council renting increased from about 2% in 1918 to a peak of approximately 31% in 1981. After that, the figure gradually fell, reaching around 17% in 2011.",
+        ],
+      },
+      {
+        task: "Task 2",
+        title: "Online Education vs Traditional Classroom Education",
+        paragraphs: [
+          "Online education has become increasingly common in recent years, and some people believe that it can replace traditional classroom learning. While online courses offer greater flexibility and access to education, I believe that face-to-face classes still provide important benefits, particularly in terms of human interaction.",
+          "One major advantage of online education is that it makes learning more accessible. Students can attend classes regardless of where they live, which is particularly useful for people who live far from universities or have difficulty travelling. It can also help students with health problems or physical disabilities to continue their education from home. As a result, online learning can provide educational opportunities to a wider range of people.",
+          "However, traditional classroom education has an important advantage that online learning cannot fully provide: face-to-face interaction. When students and teachers meet in person, they can see each other's facial expressions and reactions and communicate more naturally. Students can also build closer relationships with their classmates through regular interaction. Therefore, classroom learning can help students develop not only academic knowledge but also interpersonal skills.",
+          "In conclusion, online education is valuable because it makes learning more flexible and accessible. However, traditional classrooms remain important because they provide direct human interaction. For this reason, I believe that the most effective approach is to use both forms of education together.",
+        ],
+      },
+    ],
   },
 
   reading: {
