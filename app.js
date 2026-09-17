@@ -149,6 +149,28 @@
     return `${pageHeader("Study section", section.title, section.description)}<div class="starter-grid">${cards}</div>`;
   }
 
+  function renderWriting() {
+    const section = content.writing;
+    const tasks = section.tasks
+      .map(
+        (task) => `
+          <article class="writing-card">
+            <h2>${task.title}</h2>
+            <p class="writing-rule">${task.rule}</p>
+            <ol>${task.steps.map((step) => `<li>${step}</li>`).join("")}</ol>
+            <div class="writing-example"><span class="eyebrow">One useful example</span><p>${task.example}</p></div>
+            <div class="writing-chunks">${task.chunks.map((chunk) => `<span>${chunk}</span>`).join("")}</div>
+          </article>`,
+      )
+      .join("");
+
+    return `
+      ${pageHeader("Writing essentials", section.title, section.description)}
+      <div class="writing-principle">${section.principle}</div>
+      <div class="writing-grid">${tasks}</div>
+      <p class="writing-routine"><strong>Practice:</strong> ${section.routine}</p>`;
+  }
+
   function renderListening() {
     const section = content.listening;
     const percent = Math.round((section.recentScore.score / section.recentScore.total) * 100);
@@ -219,7 +241,7 @@
   const renderers = {
     home: renderHome,
     speaking: renderSpeaking,
-    writing: () => renderStarter("writing"),
+    writing: renderWriting,
     reading: () => renderStarter("reading"),
     listening: renderListening,
     expressions: renderExpressions,

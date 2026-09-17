@@ -108,12 +108,33 @@ window.IELTS_CONTENT = {
 
   writing: {
     title: "Writing",
-    description: "A growing collection of task plans, essays, and feedback.",
-    starters: [
-      { title: "Task 1", note: "Add charts, letters, and model responses here." },
-      { title: "Task 2", note: "Add essay plans, introductions, and full responses here." },
-      { title: "Review log", note: "Track repeated grammar and coherence issues." },
+    description: "Simple, clear, accurate writing for Band 7.0.",
+    principle: "Accuracy first, complexity second. Learn useful chunks, not whole model answers.",
+    tasks: [
+      {
+        title: "Task 1 · Charts",
+        rule: "Don't list every number. Show the pattern and group similar data.",
+        steps: [
+          "Introduction: say what the chart shows.",
+          "Overview: name the highest, lowest, and main contrast.",
+          "Body: group high figures, then the remaining figures.",
+        ],
+        example: "Overall, sending and receiving emails was the most common online activity, while selling goods and services was the least common.",
+        chunks: ["This was followed by…", "with figures of A and B, respectively", "ranging from A to B", "By contrast, …"],
+      },
+      {
+        title: "Task 2 · Essay",
+        rule: "Develop one clear idea before moving to the next.",
+        steps: [
+          "Introduction: state the topic and your position.",
+          "Body: point → explanation → example or detail → result.",
+          "Conclusion: restate your answer briefly.",
+        ],
+        example: "One major advantage of online education is that it makes learning more accessible. Students can attend classes regardless of where they live.",
+        chunks: ["One major advantage of X is that…", "regardless of where…", "As a result, …", "For this reason, I believe that…"],
+      },
     ],
+    routine: "Timed draft (Task 1: 20 min · Task 2: 40 min) → check structure and accuracy → save 5–10 useful chunks.",
   },
 
   reading: {
