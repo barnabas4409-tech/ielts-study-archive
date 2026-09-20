@@ -103,6 +103,18 @@ window.IELTS_CONTENT = {
         question: "Do you enjoy cooking?",
         answer: "Yes, I really enjoy cooking. I especially like making soup because I find the sound of it bubbling quite relaxing. It's a small thing, but it makes me happy.",
       },
+      {
+        question: "What text are you preaching on?",
+        answer: "The text for my sermon is Luke chapter 15.",
+      },
+      {
+        question: "What is challenging about preparing a sermon?",
+        answer: "One challenge is choosing the angle or focus of my sermon.",
+      },
+      {
+        question: "What do you find difficult about learning English?",
+        answer: "I think learning a language requires repetition, but when the topics keep changing, it's hard to repeat what I've learned.",
+      },
     ],
   },
 
@@ -282,6 +294,15 @@ window.IELTS_CONTENT = {
       "It's a small thing, but…",
       "prepare breakfast for someone",
       "remind me of + noun",
+      "unwind by + -ing",
+      "books on + topic",
+      "One challenge is + -ing",
+      "require repetition",
+      "be busy with + noun / -ing",
+      "help someone feel less alone",
+      "really matter to someone",
+      "That's why I became + role",
+      "break it up with a short pause",
     ],
     // Keep examples beside their expression; add another sentence to the array to show a new use.
     examples: {
@@ -311,6 +332,15 @@ window.IELTS_CONTENT = {
       "It's a small thing, but…": ["It's a small thing, but it makes me happy.", "It's a small thing, but it helps me relax."],
       "prepare breakfast for someone": ["I prepare breakfast for my children.", "I usually prepare breakfast for my family."],
       "remind me of + noun": ["It reminds me of my university days.", "This song reminds me of my hometown."],
+      "unwind by + -ing": ["I can unwind by reading or watching documentaries.", "I unwind by listening to jazz after work."],
+      "books on + topic": ["I enjoy reading books on theology, history, and literature.", "I'm reading a book on ancient history."],
+      "One challenge is + -ing": ["One challenge is choosing the focus of my sermon.", "One challenge is finding enough time to study."],
+      "require repetition": ["Learning a language requires repetition.", "Improving pronunciation requires regular repetition."],
+      "be busy with + noun / -ing": ["I'm busy with meetings and preparing sermons.", "I've been busy with work this week."],
+      "help someone feel less alone": ["I can help them feel less alone.", "Spending time with people can help them feel less alone."],
+      "really matter to someone": ["That time together really matters to me.", "Small acts of kindness can really matter to someone."],
+      "That's why I became + role": ["That's why I became a pastor.", "I wanted to help children. That's why I became a teacher."],
+      "break it up with a short pause": ["If the sentence feels too long, break it up with a short pause.", "Break the answer up with a short pause between ideas."],
     },
     tips: [
       {
@@ -337,6 +367,36 @@ window.IELTS_CONTENT = {
         title: "Useful natural phrasing",
         example: "I prefer spending my free time alone. / I cook breakfast for my children.",
         note: "Keep these concise. Avoid “I prefer to spend my free time being alone” and “I cook because for their breakfast.”",
+      },
+      {
+        title: "Feel: -ed or -ing?",
+        example: "I feel relaxed. / Reading is relaxing.",
+        note: "Use -ed for how a person feels and -ing for the thing that creates the feeling. Avoid “I feel relaxing.”",
+      },
+      {
+        title: "Common verb patterns",
+        example: "I get home. / I listen to music. / I eat out. / What would you recommend?",
+        note: "Say get home without to, listen to music with to, and eat out for eating at a restaurant.",
+      },
+      {
+        title: "Keep verbs parallel",
+        example: "I read books on theology and watch documentaries on similar topics.",
+        note: "Match the forms: read A and watch B. Use either about or on before a topic, not both together.",
+      },
+      {
+        title: "I wish + past form",
+        example: "I wish I had more free time. / I'd like to have more free time.",
+        note: "Use I wish + past form for a present situation you want to be different.",
+      },
+      {
+        title: "Safe, quiet, or private?",
+        example: "I need a quiet place where I can relax without being disturbed.",
+        note: "A quiet place has little noise; a private space gives you time alone; a safe space lets you express yourself without judgment.",
+      },
+      {
+        title: "Countable nouns and present habits",
+        example: "I have a lot of meetings. / I have a busy schedule. / I meet many people.",
+        note: "Use meetings in the plural. Use the present tense for work and routines that happen regularly.",
       },
     ],
   },
