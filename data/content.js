@@ -133,6 +133,41 @@ window.IELTS_CONTENT = {
         title: "Online news and trusted journalists",
         prompt: "Online news is not a reliable source of the truth; we should only trust recognized journalists. To what extent do you agree or disagree?",
         focus: "질문은 온라인 뉴스의 신뢰성과 ‘공인된 기자만 믿어야 하는가’를 함께 묻습니다. 기자도 영향을 받을 수 있다는 생각을 유지하되, 온라인 뉴스의 위험과 정보를 검증하는 기준까지 설명하면 입장이 더 분명해집니다.",
+        comparisons: [
+          { section: "Introduction", rows: [
+            ["These days, many experts say that legacy media’s power gradually may decrease because of lots kinds of online media.", "As online news becomes more common, traditional media may gradually lose influence.", "근거 없는 many experts say를 빼고, may gradually lose influence로 자연스럽게 표현합니다."],
+            ["From this view, there are pros and cons about a reliable source of the truth.", "This raises the question of which news sources readers can trust.", "pros and cons보다 문제의 핵심인 ‘어떤 출처를 신뢰할 수 있는가’를 직접 제시합니다."],
+            ["some people insist that media should be controlled by recognized journalists.", "Some people argue that we should trust only recognized journalists.", "문제는 언론 통제가 아니라 누구를 신뢰할지에 관한 것입니다. 문장 첫 글자도 대문자로 씁니다."],
+            ["on the other hand, some critics interpret positively this phenomenon.", "Others believe that online sources can also be reliable.", "this phenomenon의 대상을 명확히 하고, 온라인 뉴스의 신뢰성으로 논점을 맞춥니다."],
+            ["Because journalists can be controlled the power and money.", "Journalists themselves may be influenced by political or financial interests.", "Because로 시작한 불완전한 문장을 고치고, be influenced by를 사용합니다."],
+            ["and I also agree with the latter for two reasons.", "Therefore, I disagree that we should trust only recognized journalists.", "the latter 대신 질문의 주장에 대한 반대 입장을 직접 밝힙니다."],
+          ] },
+          { section: "Body 1", rows: [
+            ["Firstly, Traditional media like journalist have had control our society.", "First, traditional media have long influenced public opinion.", "journalist는 사람, media는 매체입니다. have had control our society는 부자연스럽습니다."],
+            ["Particularly, journalist have had deep bond with big company and the politicians.", "Some journalists may have close ties to large companies or politicians.", "journalists/companies의 복수형과 have close ties to를 쓰고, 모든 기자에게 일반화하지 않습니다."],
+            ["it means that they could have the power to manipulate the facts that they have to report honestly.", "These relationships can create a risk of biased reporting.", "관계가 있다는 것만으로 사실 조작을 단정할 수 없으므로 편향 보도의 위험으로 표현합니다."],
+            ["In this view, traditional media didn’t have less restriction because its power.", "A professional title alone does not guarantee unbiased reporting.", "didn’t have less restriction은 의미가 모호합니다. 문단의 핵심 주장을 직접 씁니다."],
+            ["So Online news is positive to make good balance between legacy media and new media.", "Independent online sources can help readers compare different reports.", "good balance가 무엇인지 불분명하므로 온라인 출처의 구체적 역할을 설명합니다."],
+          ] },
+          { section: "Body 2", rows: [
+            ["Secondly, online media is inevitable phenomenon in modern society.", "Second, online news is now a common part of modern life.", "an inevitable phenomenon처럼 관사가 필요합니다. 여기서는 더 간결하고 정확하게 표현합니다."],
+            ["Improving technology, we could use lots platform.", "As technology improves, people can access information through many platforms.", "Improving technology의 주어가 맞지 않습니다. As technology improves로 연결합니다."],
+            ["people usually use AI tool everyday.", "Many people now get their news through online platforms.", "AI 사용 자체는 뉴스의 신뢰성이라는 논점에서 벗어납니다. everyday는 부사라면 every day입니다."],
+            ["Although traditional media try to make good quality programs, lots people already use Youtube, Social Networking Service and make contents themselves.", "Although established outlets produce quality journalism, many people now get news from social media and create content themselves.", "programs보다 journalism/news가 문제에 맞습니다. lots people은 many people, make contents는 create content가 자연스럽습니다."],
+            ["This is a kind of Paradigm shift.", "This wider access gives independent voices a chance to be heard.", "추상적인 paradigm shift 대신 변화가 왜 중요한지 구체화합니다."],
+            ["It is not negative, but positive.", "However, wider access also makes fact-checking essential.", "무조건 긍정적이라고 단정하기보다 온라인 정보의 위험과 검증 필요성을 인정합니다."],
+            ["I think that we have duties to make this shift better.", "Readers should compare several sources before accepting a claim.", "make this shift better보다 독자가 할 수 있는 행동을 명시합니다."],
+            ["If we can’t avoid this phenomenon, we could enjoy rather.", "They should also check the evidence behind each report.", "enjoy rather는 의미가 불분명합니다. 신뢰성을 판단하는 구체적 방법으로 마무리합니다."],
+          ] },
+          { section: "Conclusion", rows: [
+            ["In conclusion, even if there are many concerns about new media like Youtube, Only Fans, TikTok, That is just our works to solve.", "In conclusion, online news can be unreliable, so readers need to evaluate sources carefully.", "OnlyFans 등 뉴스와 관련성이 낮은 예시는 빼고, 결론에서 핵심 쟁점만 요약합니다."],
+            ["that’s not just negative.", "However, online news also has value.", "that의 대상을 명확히 하고 문장 첫 글자를 대문자로 씁니다."],
+            ["we could find it positive.", "It can offer perspectives that traditional outlets may overlook.", "positive라는 평가 대신 구체적인 장점을 제시합니다."],
+            ["Online media is more opened to everyone.", "Online media is more open to a wider range of people.", "open은 여기서 형용사이므로 opened가 아닌 open을 씁니다."],
+            ["It’s a good opportunity to make good balance for all people, even if they are weak and poor.", "It can give people whose views are often overlooked a chance to be heard.", "good balance와 weak and poor는 모호합니다. 누구의 목소리를 들을 수 있는지 분명히 합니다."],
+            ["Therefore, I agree with online news.", "Therefore, I disagree that only recognized journalists should be trusted.", "온라인 뉴스 자체에 찬성한다는 뜻이 아니라 질문의 주장에 반대한다는 입장을 씁니다."],
+          ] },
+        ],
         paragraphs: [
           [
             { original: "These days, many experts say that legacy media’s power gradually may decrease because of lots kinds of online media.", replacement: "As online news becomes more common, traditional media may gradually lose influence.", category: "표현·근거", reason: "many experts say처럼 근거 없는 권위에 기대지 않아도 됩니다. may gradually lose influence가 자연스럽고, lots kinds of는 many kinds of로 써야 합니다." },
@@ -186,6 +221,39 @@ window.IELTS_CONTENT = {
           { phrase: "judge each report by + criterion", meaning: "~을 기준으로 각 보도를 판단하다", example: "We should judge each report by how well its claims can be verified." },
         ],
       },
+    ],
+    phraseBank: [
+      { task: "Task 1 · Charts", sections: [
+        { name: "Introduction · 무엇을 보여주는가", items: [
+          { pattern: "The bar chart shows the percentages of …", example: "The bar chart shows the percentages of individuals in Great Britain who took part in various online activities in 2018.", note: "차트 종류·대상·시점을 한 문장에 소개합니다." },
+          { pattern: "The chart compares … between A and B.", example: "The chart compares the percentages of households living in owner-occupied homes, council-rented accommodation and privately rented housing between 1918 and 2011.", note: "여러 범주와 기간을 비교할 때 씁니다." },
+        ] },
+        { name: "Overview · 가장 큰 흐름", items: [
+          { pattern: "Overall, A was the most common …, while B was the least common.", example: "Overall, sending and receiving emails was the most common online activity, while selling goods and services was the least common.", note: "최고·최저를 숫자 없이 대비합니다." },
+          { pattern: "Overall, A increased …, whereas B declined.", example: "Overall, home ownership increased considerably over the period, whereas both council and private renting declined.", note: "기간별 그래프의 반대 추세를 요약합니다." },
+        ] },
+        { name: "Body · 수치와 비교", items: [
+          { pattern: "This was followed by …, at approximately …", example: "This was followed by researching goods and services, at approximately 78%.", note: "두 번째로 높은 항목을 연결합니다." },
+          { pattern: "… with figures of A and B, respectively.", example: "Online banking and social networking were also common, with figures of around 69% and 65%, respectively.", note: "두 항목과 두 수치를 순서대로 대응시킵니다." },
+          { pattern: "… rose steadily from A to B, before falling slightly to C.", example: "The proportion of owner-occupied homes rose steadily from around 22% in 1918 to approximately 69% in 2001, before falling slightly to about 64% in 2011.", note: "상승 후 하락 같은 변화에 씁니다." },
+        ] },
+      ] },
+      { task: "Task 2 · Essay", sections: [
+        { name: "Introduction · 주제와 입장", items: [
+          { pattern: "While A offers …, I believe that B still …", example: "While online courses offer greater flexibility and access to education, I believe that face-to-face classes still provide important benefits, particularly in terms of human interaction.", note: "양쪽을 인정하면서 내 입장을 밝힙니다." },
+          { pattern: "I disagree with this absolute view.", example: "I disagree with this absolute view.", note: "only처럼 단정적인 주장에 반대할 때 씁니다." },
+        ] },
+        { name: "Body · 주장과 설명", items: [
+          { pattern: "One major advantage of A is that …", example: "One major advantage of online education is that it makes learning more accessible.", note: "문단의 첫 주장으로 씁니다." },
+          { pattern: "However, A has an important advantage that B cannot fully provide: …", example: "However, traditional classroom education has an important advantage that online learning cannot fully provide: face-to-face interaction.", note: "대조되는 문단의 핵심을 제시합니다." },
+          { pattern: "For example, … supported by … may be more trustworthy than …", example: "For example, a first-hand account supported by photos, dates and other verifiable evidence may be more trustworthy than an unsupported claim in a major newspaper.", note: "주장에 구체적인 근거를 붙입니다." },
+          { pattern: "As a result, … can provide …", example: "As a result, online learning can provide educational opportunities to a wider range of people.", note: "설명한 장점의 결과를 정리합니다." },
+        ] },
+        { name: "Conclusion · 입장 재확인", items: [
+          { pattern: "In conclusion, A is valuable because …; however, B remains important because …", example: "In conclusion, online education is valuable because it makes learning more flexible and accessible. However, traditional classrooms remain important because they provide direct human interaction.", note: "두 논점을 짧게 다시 연결합니다." },
+          { pattern: "For this reason, I believe that …", example: "For this reason, I believe that the most effective approach is to use both forms of education together.", note: "최종 입장을 한 문장으로 끝냅니다." },
+        ] },
+      ] },
     ],
     tasks: [
       {

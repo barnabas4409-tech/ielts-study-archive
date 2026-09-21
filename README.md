@@ -30,13 +30,18 @@ All study material and navigation labels live in `data/content.js`. Edit that fi
 
 Send the original essay and task prompt in the Codex conversation to prepare a review, then save it in `writing.reviews`. The website displays saved reviews; it does not submit essays to an AI service.
 
-Each review has `task`, `title`, `paragraphs`, `model` (full revised paragraphs), and `expressions` (`phrase`, `meaning`, `example`). Each original paragraph is an array of unchanged strings and correction objects with `original`, `replacement`, `category`, and `reason`. Keep every original character in those strings and `original` fields so the original-only view reconstructs the submitted essay exactly. An empty `original` inserts text; an empty `replacement` deletes text.
+Each review has `task`, `title`, `paragraphs`, `comparisons`, `model` (full revised paragraphs), and `expressions` (`phrase`, `meaning`, `example`). `comparisons` groups rows by essay section; each row is `[original sentence, suggested sentence, reason]`. The website shows these side by side, then the complete model answer. Each original paragraph is an array of unchanged strings and correction objects with `original`, `replacement`, `category`, and `reason`. Keep every original character in those strings and `original` fields so the original-only view reconstructs the submitted essay exactly. An empty `original` inserts text; an empty `replacement` deletes text.
 
 ```js
 paragraphs: [
   ["Many people ", { original: "uses", replacement: "use", category: "문법", reason: "복수 주어에 맞춰 use를 씁니다." }, " online courses."],
+],
+comparisons: [
+  { section: "Introduction", rows: [["Many people uses online courses.", "Many people use online courses.", "people은 복수이므로 use를 씁니다."]] },
 ]
 ```
+
+The Task 1/Task 2 structure and reusable examples below the reviews are in `writing.phraseBank`. Each entry has a reusable `pattern`, an `example` quoted from a saved answer, and a short `note`.
 
 The built-in preview is explicitly labelled as a demonstration, not a submitted essay.
 

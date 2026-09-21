@@ -168,6 +168,30 @@
     return `<div class="pen-layout"><div class="pen-paper" lang="en">${marked}</div><ol class="pen-notes">${notes.map((note, index) => `<li id="${id}-note-${index + 1}" tabindex="-1"><span class="pen-category">${escapeText(note.category || "수정 제안")}</span><p>${escapeText(note.reason)}</p><a href="#${id}-mark-${index + 1}" data-review-anchor="${id}-mark-${index + 1}">원문 위치로 ↩</a></li>`).join("")}</ol></div>`;
   }
 
+  function renderSentenceComparisons(groups) {
+    return groups.map((group) => `<section class="comparison-group" aria-label="${escapeText(group.section)}">
+      <h4>${escapeText(group.section)}</h4>
+      <div class="comparison-list">${group.rows.map(([original, revised, reason], index) => `<article class="comparison-row">
+        <span class="comparison-number">${String(index + 1).padStart(2, "0")}</span>
+        <div class="comparison-cell comparison-original"><span class="comparison-label">내 문장</span><p lang="en">${escapeText(original)}</p></div>
+        <div class="comparison-cell comparison-revised"><span class="comparison-label">수정 문장</span><p lang="en">${escapeText(revised)}</p></div>
+        <p class="comparison-reason"><strong>왜 바꿨나요?</strong> ${escapeText(reason)}</p>
+      </article>`).join("")}</div>
+    </section>`).join("");
+  }
+
+  function renderWritingPhraseBank(phraseBank) {
+    return `<section class="section-block" aria-labelledby="writing-phrase-bank-heading">
+      <div class="section-heading"><div><span class="eyebrow">Reusable language · from saved answers</span><h2 id="writing-phrase-bank-heading">Task별 글의 구조와 표현</h2></div></div>
+      <p class="section-intro">아래 예문은 위 첨삭 답안과 저장된 Task 1·Task 2 답안에서 가져왔습니다. 표현 틀의 주제와 수치는 새 문제에 맞게 바꿔 쓰세요.</p>
+      <div class="phrase-task-list">${phraseBank.map((task) => `<article class="phrase-task"><h3>${escapeText(task.task)}</h3>
+        ${task.sections.map((section) => `<div class="phrase-stage"><h4>${escapeText(section.name)}</h4><div class="phrase-stage-items">
+          ${section.items.map((item) => `<div class="phrase-stage-item"><strong lang="en">${escapeText(item.pattern)}</strong><p class="phrase-example" lang="en">${escapeText(item.example)}</p><p class="phrase-note">${escapeText(item.note)}</p></div>`).join("")}
+        </div></div>`).join("")}
+      </article>`).join("")}</div>
+    </section>`;
+  }
+
   function renderWritingReviews(section) {
     const reviews = section.reviews.map((review, index) => {
       const id = `review-${index}`;
@@ -177,9 +201,10 @@
         <div class="review-content">
           ${review.prompt ? `<div class="review-prompt"><span class="eyebrow">Essay question</span><p lang="en">${escapeText(review.prompt)}</p></div>` : ""}
           ${review.focus ? `<div class="review-focus"><strong>가장 중요한 피드백</strong><p>${escapeText(review.focus)}</p></div>` : ""}
-          <h3>01 · 빨간펜 첨삭</h3>
-          <p class="review-caption">취소선은 원문, 빨간 밑줄은 수정 제안입니다. 번호를 누르면 이유를 볼 수 있어요.</p>
-          ${renderMarkedDraft(review.paragraphs, id)}
+          <h3>01 · 문장별 비교 첨삭</h3>
+          <p class="review-caption">왼쪽 원문과 오른쪽 수정안을 한 문장씩 비교하세요. 각 문장 아래에 수정 이유를 적었습니다. 아래 완성 답안은 논리와 문단 구성까지 다시 다듬었으므로 수정 문장을 그대로 이어 붙인 글은 아닙니다.</p>
+          ${review.comparisons ? renderSentenceComparisons(review.comparisons) : renderMarkedDraft(review.paragraphs, id)}
+          ${review.comparisons ? `<details class="review-original"><summary>기존 빨간펜 표시로도 보기</summary>${renderMarkedDraft(review.paragraphs, id)}</details>` : ""}
           <details class="review-original"><summary>원문만 보기</summary><div lang="en">${original}</div></details>
           <h3>02 · Band 7.0 목표 답안</h3>
           <div class="review-model" lang="en">${review.model.map((paragraph) => `<p>${escapeText(paragraph)}</p>`).join("")}</div>
@@ -237,6 +262,7 @@
     return `
       ${pageHeader("Writing essentials", section.title, section.description)}
       ${renderWritingReviews(section)}
+      ${renderWritingPhraseBank(section.phraseBank)}
       <div class="writing-principle">${section.principle}</div>
       <div class="writing-grid">${tasks}</div>
       <p class="writing-routine"><strong>Practice:</strong> ${section.routine}</p>
