@@ -123,6 +123,22 @@
           </article>`,
       )
       .join("");
+    const topicPacks = section.topicPacks
+      .map(
+        (pack, index) => `<details class="speaking-pack" ${index === 0 ? "open" : ""}>
+          <summary><span class="speaking-pack-number">${String(index + 1).padStart(2, "0")}</span><span><strong>${escapeText(pack.title)}</strong><small>${escapeText(pack.description)}</small></span><span class="writing-model-toggle" aria-hidden="true">+</span></summary>
+          <div class="speaking-pack-body">
+            <section><span class="part-label">Part 1 · Short answers</span><ol>${pack.part1.map((question) => `<li lang="en">${escapeText(question)}</li>`).join("")}</ol></section>
+            <section class="cue-card"><span class="part-label">Part 2 · Cue card</span><h3 lang="en">${escapeText(pack.part2.prompt)}</h3><ul>${pack.part2.points.map((point) => `<li lang="en">${escapeText(point)}</li>`).join("")}</ul></section>
+            <section><span class="part-label">Part 3 · Discussion</span><ol>${pack.part3.map((question) => `<li lang="en">${escapeText(question)}</li>`).join("")}</ol></section>
+            <div class="speaking-pack-phrases"><span>Useful language</span>${pack.expressions.map((phrase) => `<strong lang="en">${escapeText(phrase)}</strong>`).join("")}</div>
+          </div>
+        </details>`,
+      )
+      .join("");
+    const partTwoBank = section.partTwoBank
+      .map((item, index) => `<article class="prompt-card"><span>${String(index + 1).padStart(2, "0")} · ${escapeText(item.topic)}</span><p lang="en">${escapeText(item.question)}</p></article>`)
+      .join("");
     return `
       ${pageHeader("Speaking notes", section.title, section.description)}
       <div class="answer-list">${cards}</div>
@@ -133,6 +149,23 @@
         </div>
         <p class="section-intro">Practice answers, separate from your finalized set above.</p>
         <div class="answer-list">${practiceNotes}</div>
+      </section>
+      <section class="section-block" aria-labelledby="part-two-guide-heading">
+        <div class="section-heading"><div><span class="eyebrow">Part 2 strategy</span><h2 id="part-two-guide-heading">${escapeText(section.partTwoGuide.title)}</h2></div></div>
+        <div class="part-two-guide">
+          <ol>${section.partTwoGuide.rules.map((rule) => `<li>${escapeText(rule)}</li>`).join("")}</ol>
+          <div class="answer-flow" aria-label="Part 2 answer structure">${section.partTwoGuide.framework.map((step, index) => `<span><small>${index + 1}</small>${escapeText(step)}</span>`).join("")}</div>
+        </div>
+      </section>
+      <section class="section-block" aria-labelledby="topic-packs-heading">
+        <div class="section-heading"><div><span class="eyebrow">Part 1 → Part 2 → Part 3</span><h2 id="topic-packs-heading">Topic practice packs</h2></div><span class="section-count">${section.topicPacks.length} topics</span></div>
+        <p class="section-intro">같은 주제를 난이도가 다른 질문으로 확장해보세요. 답은 외우지 말고, 표시된 표현을 여러 질문에서 다시 사용합니다.</p>
+        <div class="speaking-pack-list">${topicPacks}</div>
+      </section>
+      <section class="section-block" aria-labelledby="part-two-bank-heading">
+        <div class="section-heading"><div><span class="eyebrow">Question rotation</span><h2 id="part-two-bank-heading">Part 2 variety bank</h2></div><span class="section-count">${section.partTwoBank.length} prompts</span></div>
+        <p class="section-intro">매번 다른 질문을 골라 1분 메모 후 1–2분 동안 말해보세요.</p>
+        <div class="prompt-grid">${partTwoBank}</div>
       </section>`;
   }
 
@@ -306,8 +339,19 @@
 
   function renderExpressions() {
     const section = content.expressions;
+    const topicPacks = section.topicPacks.map((pack) => `<article class="expression-pack">
+      <h2>${escapeText(pack.title)}</h2>
+      <div>${pack.items.map((item) => `<section><h3 lang="en">${escapeText(item.phrase)}</h3><span>${escapeText(item.meaning)}</span><p lang="en">${escapeText(item.example)}</p></section>`).join("")}</div>
+    </article>`).join("");
     return `
       ${pageHeader("Phrase bank", section.title, section.description)}
+      <section class="section-block" aria-labelledby="topic-expression-packs-heading">
+        <div class="section-heading"><div><span class="eyebrow">From recent speaking materials</span><h2 id="topic-expression-packs-heading">Topic expression packs</h2></div><span class="section-count">${section.topicPacks.length} topics</span></div>
+        <p class="section-intro">실제 답변에 자연스럽게 넣기 좋은 표현만 선별했습니다. 한 주제에서 2–3개만 골라 반복하세요.</p>
+        <div class="expression-pack-grid">${topicPacks}</div>
+      </section>
+      <section class="section-block" aria-labelledby="personal-expression-bank-heading">
+        <div class="section-heading"><div><span class="eyebrow">Personal archive</span><h2 id="personal-expression-bank-heading">My reusable expressions</h2></div></div>
       <div class="expression-list">
         ${section.items
           .map(
@@ -322,6 +366,7 @@
           )
           .join("")}
       </div>
+      </section>
       <section class="section-block" aria-labelledby="expression-tips-heading">
         <div class="section-heading">
           <div><span class="eyebrow">Usage notes</span><h2 id="expression-tips-heading">Natural ways to say it</h2></div>

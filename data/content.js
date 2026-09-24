@@ -116,6 +116,59 @@ window.IELTS_CONTENT = {
         answer: "I think learning a language requires repetition, but when the topics keep changing, it's hard to repeat what I've learned.",
       },
     ],
+    partTwoGuide: {
+      title: "Part 2 · One-minute preparation",
+      rules: [
+        "Choose a clear topic quickly and stick to it.",
+        "Write keywords and useful phrases, not full sentences.",
+        "Number your ideas so the story has a clear order.",
+        "Name the main person, place, or experience within the first 10–20 seconds.",
+        "Speak calmly, add details and reasons, and pause naturally between ideas.",
+      ],
+      framework: ["Name it", "Give the context", "Add two clear details", "Explain why it matters"],
+    },
+    topicPacks: [
+      {
+        title: "Sleep",
+        description: "일상 습관을 말하면서 자연스러운 수면 표현을 반복합니다.",
+        part1: ["Do you usually sleep well?", "Are you a light sleeper?", "Do you ever sleep in?"],
+        part2: { prompt: "Describe a time when you did not sleep well.", points: ["when it happened", "why you could not sleep", "what you did", "how you felt the next day"] },
+        part3: ["Why do many adults have trouble sleeping?", "Does technology affect the quality of sleep?", "Should employers care about their workers’ sleep and rest?"],
+        expressions: ["a light sleeper", "toss and turn", "sleep in", "as soon as my head hits the pillow"],
+      },
+      {
+        title: "Health & Exercise",
+        description: "건강 습관, 운동 장소, 정부의 역할까지 Part 1–3으로 확장합니다.",
+        part1: ["What do you do to stay healthy?", "Do you exercise regularly?", "Is it easy for you to maintain a healthy diet?"],
+        part2: { prompt: "Describe your favourite place to exercise.", points: ["where it is", "what it looks like", "what you do there", "why you like it"] },
+        part3: ["Are there many places to exercise in your country?", "Is it better to exercise indoors or outdoors?", "Is exercise as important as diet?", "Do people’s lifestyles affect their ability to exercise?", "Should the government provide free health education?"],
+        expressions: ["cut down on", "watch what I eat", "stay in shape", "a balanced diet", "a sedentary lifestyle"],
+      },
+      {
+        title: "Role Models",
+        description: "존경하는 사람을 소개하고 그 사람의 영향과 가치를 구체적으로 설명합니다.",
+        part1: ["Is there someone you really admire?", "Did anyone influence you when you were younger?", "What qualities do you respect in other people?"],
+        part2: { prompt: "Describe someone older than you whom you admire.", points: ["who the person is", "how you know them", "what qualities they have", "why you admire them"] },
+        part3: ["Why do young people need role models?", "Are celebrities always good role models?", "Can ordinary people have a strong influence on society?"],
+        expressions: ["look up to", "lead by example", "have a lasting influence on", "teach someone the value of", "earn someone’s respect"],
+      },
+    ],
+    partTwoBank: [
+      { topic: "Technology", question: "Describe an app you use on your mobile phone." },
+      { topic: "Books", question: "Describe a book you read and found useful." },
+      { topic: "Skills", question: "Describe a skill that was difficult for you to learn." },
+      { topic: "Happiness", question: "Describe a photograph that you like." },
+      { topic: "Leisure", question: "Describe an area in your home where you feel relaxed." },
+      { topic: "Study", question: "Describe a teacher who has influenced you." },
+      { topic: "Goals", question: "Describe a goal you want to achieve in the future." },
+      { topic: "Sports", question: "Describe an activity you do to keep fit." },
+      { topic: "Social Media", question: "Describe a time you saw something interesting on social media." },
+      { topic: "Travel", question: "Describe a museum that you have visited." },
+      { topic: "City", question: "Describe a person whose job is important to society." },
+      { topic: "Work", question: "Describe a good service you received." },
+      { topic: "Hobbies", question: "Describe an interest or hobby that you enjoy." },
+      { topic: "Events", question: "Describe a meeting in which you were a speaker." },
+    ],
   },
 
   writing: {
@@ -335,6 +388,47 @@ window.IELTS_CONTENT = {
   expressions: {
     title: "Expressions",
     description: "Natural phrases to recycle across speaking answers.",
+    topicPacks: [
+      {
+        title: "Sleep",
+        items: [
+          { phrase: "a light sleeper", meaning: "잠귀가 밝은 사람", example: "I’m quite a light sleeper, especially because I have three young children." },
+          { phrase: "toss and turn", meaning: "잠들지 못하고 뒤척이다", example: "I sometimes toss and turn when I’m worried about work." },
+          { phrase: "sleep in", meaning: "평소보다 늦게 자다", example: "I rarely get to sleep in, even on my day off." },
+          { phrase: "as soon as my head hits the pillow", meaning: "누우면 곧바로", example: "On busy Sundays, I fall asleep as soon as my head hits the pillow." },
+        ],
+      },
+      {
+        title: "Health & Exercise",
+        items: [
+          { phrase: "cut down on + noun", meaning: "~을 줄이다", example: "I’m trying to cut down on late-night snacks." },
+          { phrase: "watch what I eat", meaning: "먹는 것을 신경 쓰다", example: "I try to watch what I eat, although my schedule is quite busy." },
+          { phrase: "stay in shape", meaning: "건강한 몸 상태를 유지하다", example: "I walk whenever I can to stay in shape." },
+          { phrase: "a sedentary lifestyle", meaning: "주로 앉아서 생활하는 방식", example: "A sedentary lifestyle can cause health problems over time." },
+          { phrase: "under the weather", meaning: "몸 상태가 좋지 않은", example: "When I feel under the weather, I try to rest and drink plenty of water." },
+        ],
+      },
+      {
+        title: "Role Models",
+        items: [
+          { phrase: "look up to someone", meaning: "누군가를 존경하다", example: "I really look up to people who serve others consistently." },
+          { phrase: "lead by example", meaning: "행동으로 모범을 보이다", example: "A good leader should lead by example." },
+          { phrase: "have a lasting influence on", meaning: "~에게 지속적인 영향을 주다", example: "My teachers had a lasting influence on the way I think." },
+          { phrase: "teach someone the value of", meaning: "누군가에게 ~의 가치를 가르치다", example: "My parents taught me the value of responsibility." },
+          { phrase: "earn someone’s respect", meaning: "누군가의 존경을 얻다", example: "People earn my respect through consistent actions, not just words." },
+        ],
+      },
+      {
+        title: "Natural Idioms",
+        items: [
+          { phrase: "once in a blue moon", meaning: "아주 가끔", example: "I go to the cinema once in a blue moon because I’m usually busy." },
+          { phrase: "a change of scenery", meaning: "환경 변화 또는 기분 전환", example: "Travelling gives me a welcome change of scenery." },
+          { phrase: "lose track of time", meaning: "시간 가는 줄 모르다", example: "I sometimes lose track of time when I’m reading." },
+          { phrase: "a double-edged sword", meaning: "장단점이 모두 있는 것", example: "Social media can be a double-edged sword." },
+          { phrase: "recharge my batteries", meaning: "휴식하며 에너지를 회복하다", example: "I need some quiet time to recharge my batteries after a busy weekend." },
+        ],
+      },
+    ],
     items: [
       "I get to + verb",
       "I find it + adjective",
@@ -465,6 +559,16 @@ window.IELTS_CONTENT = {
         title: "Countable nouns and present habits",
         example: "I have a lot of meetings. / I have a busy schedule. / I meet many people.",
         note: "Use meetings in the plural. Use the present tense for work and routines that happen regularly.",
+      },
+      {
+        title: "Use sleep expressions carefully",
+        example: "I fall asleep as soon as my head hits the pillow. / I get up at the crack of dawn.",
+        note: "Pass out can mean lose consciousness, so prefer fall asleep in IELTS answers. The correct expression is at the crack of dawn, not down.",
+      },
+      {
+        title: "Do not force idioms",
+        example: "Social media can be a double-edged sword. / I read to recharge my batteries.",
+        note: "One well-chosen idiom is enough. Use it only when it matches your real meaning and keep the rest of the answer clear.",
       },
     ],
   },

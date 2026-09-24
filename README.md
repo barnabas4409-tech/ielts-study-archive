@@ -26,6 +26,8 @@ Then open `http://localhost:8000/#/home`.
 
 All study material and navigation labels live in `data/content.js`. Edit that file to add answers, phrases, scores, notes, or new starter cards; the interface renders the data automatically.
 
+Speaking practice is organized in `speaking.topicPacks` (Part 1, Part 2 cue card, Part 3, and useful language) and `speaking.partTwoBank` (rotating cue-card questions). Curated vocabulary from lesson materials lives in `expressions.topicPacks`, separate from the personal reusable-expression list.
+
 ### Writing reviews
 
 Send the original essay and task prompt in the Codex conversation to prepare a review, then save it in `writing.reviews`. The website displays saved reviews; it does not submit essays to an AI service.
