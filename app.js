@@ -225,6 +225,45 @@
     </section>`;
   }
 
+  function renderTaskOneToolkit(toolkit) {
+    const movementRows = toolkit.movement.map((item) => `<tr><th scope="row">${escapeText(item.meaning)}</th><td lang="en">${escapeText(item.verb)}</td><td lang="en">${escapeText(item.noun)}</td><td lang="en">${escapeText(item.example)}</td></tr>`).join("");
+    const degreeCards = toolkit.degrees.map((item) => `<article class="toolkit-mini-card"><span>${escapeText(item.level)}</span><strong lang="en">${escapeText(item.words)}</strong><p lang="en">${escapeText(item.example)}</p>${item.warning ? `<small>${escapeText(item.warning)}</small>` : ""}</article>`).join("");
+    const numberCards = toolkit.numbers.map((item) => `<article class="toolkit-rule-card"><strong lang="en">${escapeText(item.form)}</strong><span>${escapeText(item.meaning)}</span><p lang="en">${escapeText(item.example)}</p></article>`).join("");
+    const overviewCards = toolkit.overviews.map((item) => `<article class="overview-builder-card"><span class="part-label">${escapeText(item.type)}</span><h4>${escapeText(item.lookFor)}</h4><p lang="en">${escapeText(item.template)}</p><small>${escapeText(item.reminder)}</small></article>`).join("");
+    const comparisonCards = toolkit.comparisons.map((item) => `<article class="comparison-expression"><span>${escapeText(item.purpose)}</span><strong lang="en">${escapeText(item.pattern)}</strong><p lang="en">${escapeText(item.example)}</p></article>`).join("");
+    const mistakeRows = toolkit.mistakes.map((item, index) => `<article class="toolkit-correction"><span class="comparison-number">${String(index + 1).padStart(2, "0")}</span><div class="toolkit-correction-text"><p class="toolkit-wrong" lang="en">${escapeText(item.original)}</p><p class="toolkit-right" lang="en">${escapeText(item.corrected)}</p><small>${escapeText(item.reason)}</small></div></article>`).join("");
+    const practiceCards = toolkit.practice.map((item, index) => `<details class="toolkit-practice-card"><summary><span>${String(index + 1).padStart(2, "0")} · ${escapeText(item.label)}</span><strong>${escapeText(item.prompt)}</strong><i aria-hidden="true">+</i></summary><div><p lang="en">${escapeText(item.answer)}</p><small>${escapeText(item.note)}</small></div></details>`).join("");
+
+    return `<section class="section-block task-one-toolkit" aria-labelledby="task-one-toolkit-heading">
+      <div class="section-heading"><div><span class="eyebrow">Task 1 · Quick reference</span><h2 id="task-one-toolkit-heading">Task 1 Toolkit</h2></div><span class="section-count">5 tools</span></div>
+      <p class="section-intro">${escapeText(toolkit.note)}</p>
+      <details class="toolkit-section" open>
+        <summary><span><small>01</small><strong>변화를 정확하게 쓰기</strong></span><i aria-hidden="true">+</i></summary>
+        <div class="toolkit-section-body">
+          <div class="toolkit-table-wrap"><table class="toolkit-table"><thead><tr><th>의미</th><th>동사</th><th>명사</th><th>예문</th></tr></thead><tbody>${movementRows}</tbody></table></div>
+          <h4 class="toolkit-subheading">변화의 크기</h4><div class="toolkit-mini-grid">${degreeCards}</div>
+        </div>
+      </details>
+      <details class="toolkit-section">
+        <summary><span><small>02</small><strong>수치 문법 · from / to / by / at</strong></span><i aria-hidden="true">+</i></summary>
+        <div class="toolkit-section-body"><div class="toolkit-rule-grid">${numberCards}</div></div>
+      </details>
+      <details class="toolkit-section">
+        <summary><span><small>03</small><strong>Overview Builder</strong></span><i aria-hidden="true">+</i></summary>
+        <div class="toolkit-section-body"><p class="toolkit-lead">Overview에는 모든 숫자가 아니라, 채점자가 한눈에 알아야 할 큰 특징 2가지를 씁니다.</p><div class="overview-builder-grid">${overviewCards}</div></div>
+      </details>
+      <details class="toolkit-section">
+        <summary><span><small>04</small><strong>Comparison Expressions</strong></span><i aria-hidden="true">+</i></summary>
+        <div class="toolkit-section-body"><div class="comparison-expression-grid">${comparisonCards}</div></div>
+      </details>
+      <details class="toolkit-section">
+        <summary><span><small>05</small><strong>Common Mistakes</strong></span><i aria-hidden="true">+</i></summary>
+        <div class="toolkit-section-body"><div class="toolkit-correction-list">${mistakeRows}</div></div>
+      </details>
+      <section class="toolkit-practice" aria-labelledby="task-one-practice-heading"><span class="eyebrow">Check yourself</span><h3 id="task-one-practice-heading">Mini Practice</h3><p>먼저 직접 한 문장을 만든 뒤 카드를 열어 답을 확인하세요.</p><div>${practiceCards}</div></section>
+    </section>`;
+  }
+
   function renderWritingReviews(section) {
     const reviews = section.reviews.map((review, index) => {
       const id = `review-${index}`;
@@ -295,6 +334,7 @@
     return `
       ${pageHeader("Writing essentials", section.title, section.description)}
       ${renderWritingReviews(section)}
+      ${renderTaskOneToolkit(section.taskOneToolkit)}
       ${renderWritingPhraseBank(section.phraseBank)}
       <div class="writing-principle">${section.principle}</div>
       <div class="writing-grid">${tasks}</div>

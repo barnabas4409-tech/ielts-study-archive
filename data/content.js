@@ -275,6 +275,58 @@ window.IELTS_CONTENT = {
         ],
       },
     ],
+    taskOneToolkit: {
+      note: "표현을 많이 외우기보다, 변화·수치·비교·Overview의 역할을 구분해서 사용하세요.",
+      movement: [
+        { meaning: "증가", verb: "increase / rise", noun: "an increase / a rise", example: "The figure rose steadily from 22% to 69%." },
+        { meaning: "감소", verb: "decrease / decline / fall", noun: "a decrease / a decline / a fall", example: "Private renting declined substantially over the period." },
+        { meaning: "변동", verb: "fluctuate", noun: "a fluctuation", example: "The rate fluctuated slightly before reaching 40%." },
+        { meaning: "유지", verb: "remain stable", noun: "little or no change", example: "The figure remained stable at around 30%." },
+        { meaning: "최고점", verb: "peak at", noun: "reach a peak of", example: "Council renting peaked at approximately 31%." },
+        { meaning: "최저점", verb: "bottom out at", noun: "reach the lowest point of", example: "The rate bottomed out at 10% in 2001." },
+      ],
+      degrees: [
+        { level: "작은 변화", words: "slightly / gradually / steadily", example: "The figure fell slightly to 64%." },
+        { level: "큰 변화", words: "significantly / considerably / substantially", example: "Home ownership increased considerably." },
+        { level: "빠르고 큰 변화", words: "sharply / dramatically", example: "The percentage rose sharply between 1990 and 2000.", warning: "그래프에서 변화 폭이 실제로 클 때만 사용합니다." },
+      ],
+      numbers: [
+        { form: "from A to B", meaning: "시작값에서 최종값까지", example: "The figure rose from 20% to 35%." },
+        { form: "by + amount", meaning: "얼마나 변했는지", example: "The figure rose by 15 percentage points." },
+        { form: "at + figure", meaning: "특정 시점의 수치", example: "The figure stood at 35% in 2018." },
+        { form: "with + figure", meaning: "수치를 덧붙여 설명", example: "Email was the most common activity, with 84% of respondents taking part." },
+        { form: "fraction / percentage", meaning: "비율을 자연스럽게 바꿔 표현", example: "About three quarters of respondents, or roughly 75%, used the service." },
+      ],
+      overviews: [
+        { type: "Dynamic chart", lookFor: "가장 큰 상승·하락, 전체 흐름, 예외", template: "Overall, A increased considerably, whereas B declined over the period.", reminder: "세부 연도와 숫자는 Body에 둡니다." },
+        { type: "Static chart", lookFor: "최고·최저, 비슷한 묶음, 가장 큰 대비", template: "Overall, A was the largest category, while B accounted for the smallest proportion.", reminder: "시간 변화가 없으면 trend라고 부르지 않습니다." },
+        { type: "Map", lookFor: "가장 큰 변화, 새로 생긴 것, 사라진 것, 유지된 것", template: "Overall, the area became more residential, with several new facilities added while the central road remained unchanged.", reminder: "Overview에서는 위치를 하나씩 나열하지 않습니다." },
+        { type: "Process", lookFor: "단계 수, 시작과 끝, 선형·순환 여부", template: "Overall, the process consists of six stages, beginning with A and ending with B.", reminder: "세부 동작은 순서대로 Body에서 설명합니다." },
+      ],
+      comparisons: [
+        { purpose: "다음 순위", pattern: "This was followed by …", example: "This was followed by online banking, at approximately 69%." },
+        { purpose: "큰 차이", pattern: "A was considerably higher than B.", example: "Email use was considerably higher than online selling." },
+        { purpose: "비슷한 수치", pattern: "A and B recorded similar figures.", example: "Music streaming and online video recorded similar figures." },
+        { purpose: "가장 큰 비중", pattern: "A accounted for the largest proportion.", example: "Private renting accounted for the largest proportion in 1918." },
+        { purpose: "대조", pattern: "By contrast, … / while / whereas", example: "Home ownership rose, whereas private renting declined." },
+        { purpose: "두 항목과 두 수치", pattern: "…, at A and B, respectively.", example: "The figures for banking and social networking were 69% and 65%, respectively." },
+        { purpose: "범위", pattern: "ranging from A to B", example: "The figures were fairly similar, ranging from 55% to 62%." },
+      ],
+      mistakes: [
+        { original: "Growths are found in A and B.", corrected: "A and B both increased.", reason: "growth는 보통 셀 수 없는 명사입니다. 동사 increased가 더 간단하고 정확합니다." },
+        { original: "B marked the lowest.", corrected: "B recorded the lowest figure.", reason: "수치를 기록했다는 뜻에는 recorded가 자연스럽습니다." },
+        { original: "B stayed as the lowest position.", corrected: "B remained the lowest.", reason: "순위를 나타낼 때 remained the lowest로 간결하게 씁니다." },
+        { original: "The shop is on the bottom right.", corrected: "The shop is in the bottom-right corner.", reason: "지도 안의 위치에는 in을 사용합니다." },
+        { original: "Lines A and B meet in point F.", corrected: "Lines A and B meet at point F.", reason: "정확한 지점 앞에는 at을 사용합니다." },
+        { original: "This process was completed in six steps.", corrected: "The process consists of six stages.", reason: "과정의 구성 단계 수를 소개할 때 consists of가 자연스럽습니다." },
+      ],
+      practice: [
+        { label: "Numbers", prompt: "20%에서 35%로 상승했고, 증가 폭은 15%p입니다.", answer: "The figure rose from 20% to 35%, an increase of 15 percentage points.", note: "from/to는 두 수치, by 또는 an increase of는 변화량입니다." },
+        { label: "Static overview", prompt: "A가 가장 높고 B가 가장 낮은 막대그래프의 Overview를 쓰세요.", answer: "Overall, A recorded the highest figure, while B was the least common category.", note: "숫자 없이 가장 중요한 대비만 씁니다." },
+        { label: "Dynamic overview", prompt: "소유 주택은 증가하고 민간 임대는 감소한 그래프를 요약하세요.", answer: "Overall, home ownership increased considerably, whereas private renting declined over the period.", note: "반대 흐름은 whereas로 한 문장에 묶을 수 있습니다." },
+        { label: "Comparison", prompt: "A와 B가 각각 69%와 65%였다고 쓰세요.", answer: "A and B recorded figures of 69% and 65%, respectively.", note: "respectively는 항목과 수치의 순서가 정확히 대응할 때만 씁니다." },
+      ],
+    },
     phraseBank: [
       { task: "Task 1 · Charts", sections: [
         { name: "Introduction · 무엇을 보여주는가", items: [
