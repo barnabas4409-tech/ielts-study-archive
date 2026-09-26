@@ -45,7 +45,7 @@ comparisons: [
 
 The Task 1/Task 2 structure and reusable examples below the reviews are in `writing.phraseBank`. Each entry has a reusable `pattern`, an `example` quoted from a saved answer, and a short `note`.
 
-The focused Task 1 reference is in `writing.taskOneToolkit`. Edit its `movement`, `degrees`, `numbers`, `overviews`, `comparisons`, `mistakes`, and `practice` arrays to extend the toolkit without changing the page code.
+The focused Task 1 reference is in `writing.taskOneToolkit`. Its full expression tables live in `movement`, `degrees`, `generalExpressions`, `timePlacePrepositions`, `numbers`, `measurementNouns`, `fractions`, and `referencePhrases`; the remaining arrays contain overview, comparison, correction, and practice material.
 
 The built-in preview is explicitly labelled as a demonstration, not a submitted essay.
 
