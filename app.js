@@ -104,7 +104,7 @@
           <article class="answer-card">
             <div class="answer-number">${String(index + 1).padStart(2, "0")}</div>
             <div>
-              <span class="part-label">Part 1</span>
+              <span class="part-label">${escapeText(item.label || "Part 1")}</span>
               <h2>${item.question}</h2>
               <p>“${item.answer}”</p>
             </div>

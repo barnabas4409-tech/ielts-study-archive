@@ -72,6 +72,26 @@ window.IELTS_CONTENT = {
         question: "Why do you think people have hobbies?",
         answer: "I think having hobbies is almost instinctive. We naturally need things that give us joy and help us relax, especially when life gets busy.",
       },
+      {
+        label: "Part 1 · Cash & Credit Cards · Sep 28, 2026",
+        question: "Do you usually pay by cash or credit card?",
+        answer: "I usually pay by credit card because it’s just more convenient for me, so I use it all the time.",
+      },
+      {
+        label: "Part 1 · Cash & Credit Cards · Sep 28, 2026",
+        question: "Do people in your country still use cash a lot?",
+        answer: "I think some people still use cash, but it’s not very common. Even kids use cards these days, usually through their parents’ accounts.",
+      },
+      {
+        label: "Part 1 · Cash & Credit Cards · Sep 28, 2026",
+        question: "When do you usually use cash instead of a card?",
+        answer: "Honestly, I hardly ever use cash these days. The only time is when I need coins for something small, like a kiddie ride at a mart.",
+      },
+      {
+        label: "Part 1 · Cash & Credit Cards · Sep 28, 2026",
+        question: "Do you think cash will disappear in the future?",
+        answer: "I don’t think cash will disappear because central banks and governments still issue it, and it’s useful as a backup.",
+      },
     ],
     // Practice ideas are kept separate from the finalized Part 1 answers above.
     practiceNotes: [
@@ -737,6 +757,24 @@ window.IELTS_CONTENT = {
           { phrase: "have a lasting influence on", meaning: "~에게 지속적인 영향을 주다", example: "My teachers had a lasting influence on the way I think." },
           { phrase: "teach someone the value of", meaning: "누군가에게 ~의 가치를 가르치다", example: "My parents taught me the value of responsibility." },
           { phrase: "earn someone’s respect", meaning: "누군가의 존경을 얻다", example: "People earn my respect through consistent actions, not just words." },
+        ],
+      },
+      {
+        title: "Cash & Credit Cards",
+        items: [
+          { phrase: "pay by credit card", meaning: "신용카드로 결제하다 · 결제 수단을 말할 때 관사를 쓰지 않음", example: "I usually pay by credit card because it’s more convenient for me." },
+          { phrase: "It’s more convenient for me.", meaning: "나에게 더 편리하다", example: "I use a card because it’s more convenient for me." },
+          { phrase: "all the time", meaning: "항상 · 아주 자주", example: "I use my credit card all the time." },
+          { phrase: "It’s not very common.", meaning: "그렇게 흔하지 않다", example: "Some people still use cash, but it’s not very common." },
+          { phrase: "these days", meaning: "요즘에는 · in these days가 아님", example: "Even kids use cards these days." },
+          { phrase: "through someone’s account", meaning: "누군가의 계정을 통해서", example: "Children often use cards through their parents’ accounts." },
+          { phrase: "hardly ever + verb", meaning: "거의 …하지 않는다", example: "I hardly ever use cash these days." },
+          { phrase: "The only time is when …", meaning: "유일하게 …하는 때는 …할 때다", example: "The only time is when I need coins for something small." },
+          { phrase: "need coins for something", meaning: "무언가를 위해 동전이 필요하다", example: "Sometimes I need coins for a kiddie ride." },
+          { phrase: "a kiddie ride", meaning: "어린이용 놀이기구", example: "My children sometimes want to use a kiddie ride at a mart." },
+          { phrase: "I don’t think … will …", meaning: "나는 …할 것이라고 생각하지 않는다", example: "I don’t think cash will disappear completely." },
+          { phrase: "issue cash", meaning: "현금을 발행하다", example: "Central banks and governments still issue cash." },
+          { phrase: "be useful as a backup", meaning: "비상수단으로 유용하다", example: "Cash can be useful as a backup when cards do not work." },
         ],
       },
       {
