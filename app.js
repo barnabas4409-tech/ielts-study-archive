@@ -225,6 +225,32 @@
     </section>`;
   }
 
+  function renderTaskOneVocabulary(vocabulary) {
+    const stages = vocabulary.stages.map((stage, stageIndex) => {
+      const groups = stage.groups.map((group) => `<section class="vocab-group">
+        <h4>${escapeText(group.name)}</h4>
+        <div class="vocab-grid">${group.items.map((item) => `<article class="vocab-card">
+          <strong lang="en">${escapeText(item.phrase)}</strong>
+          <p class="vocab-meaning">${escapeText(item.meaning)}</p>
+          <div class="vocab-examples">${item.examples.map((example) => `<p lang="en"><span>EXAMPLE</span>${escapeText(example)}</p>`).join("")}</div>
+        </article>`).join("")}</div>
+      </section>`).join("");
+      return `<details class="vocab-stage" ${stageIndex === 0 ? "open" : ""}>
+        <summary><span><small>${String(stageIndex + 1).padStart(2, "0")}</small><strong>${escapeText(stage.title)}</strong></span><i aria-hidden="true">+</i></summary>
+        <div class="vocab-stage-body">
+          <p class="vocab-description">${escapeText(stage.description)}</p>
+          ${groups}
+          <div class="vocab-template"><span>REUSABLE TEMPLATE</span><strong lang="en">${escapeText(stage.template)}</strong><p lang="en">${escapeText(stage.templateExample)}</p></div>
+        </div>
+      </details>`;
+    }).join("");
+    return `<section class="section-block task-one-vocabulary" aria-labelledby="task-one-vocabulary-heading">
+      <div class="section-heading"><div><span class="eyebrow">Memorise · adapt · use</span><h2 id="task-one-vocabulary-heading">Writing Task 1 단어장</h2></div><span class="section-count">표현 + 뜻 + 예문</span></div>
+      <p class="section-intro">${escapeText(vocabulary.note)}</p>
+      ${stages}
+    </section>`;
+  }
+
   function renderTaskOneToolkit(toolkit) {
     const movementRows = toolkit.movement.map((item) => `<tr><th scope="row">${escapeText(item.meaning)}</th><td lang="en">${escapeText(item.verb)}</td><td lang="en">${escapeText(item.past)}</td><td lang="en">${escapeText(item.participle)}</td><td lang="en">${escapeText(item.noun)}</td></tr>`).join("");
     const degreeRows = toolkit.degrees.map((item) => `<tr><th scope="row">${escapeText(item.level)}</th><td lang="en">${escapeText(item.adjective)}</td><td lang="en">${escapeText(item.adverb)}</td></tr>`).join("");
@@ -355,6 +381,7 @@
       ${pageHeader("Writing essentials", section.title, section.description)}
       ${renderWritingReviews(section)}
       ${renderTaskOneToolkit(section.taskOneToolkit)}
+      ${renderTaskOneVocabulary(section.taskOneVocabulary)}
       ${renderWritingPhraseBank(section.phraseBank)}
       <div class="writing-principle">${section.principle}</div>
       <div class="writing-grid">${tasks}</div>

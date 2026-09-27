@@ -47,6 +47,8 @@ The Task 1/Task 2 structure and reusable examples below the reviews are in `writ
 
 The focused Task 1 reference is in `writing.taskOneToolkit`. Its full expression tables live in `movement`, `degrees`, `generalExpressions`, `timePlacePrepositions`, `numbers`, `measurementNouns`, `fractions`, and `referencePhrases`; the remaining arrays contain overview, comparison, correction, and practice material.
 
+The memorisation-focused Task 1 word bank is in `writing.taskOneVocabulary`. It is grouped into Introduction, Overall, Body 1, and Body 2 stages, and every expression includes a Korean meaning and at least one reusable IELTS example sentence.
+
 The built-in preview is explicitly labelled as a demonstration, not a submitted essay.
 
 ## Deploy
