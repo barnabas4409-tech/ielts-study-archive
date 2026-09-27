@@ -634,6 +634,36 @@ window.IELTS_CONTENT = {
           "In conclusion, online education is valuable because it makes learning more flexible and accessible. However, traditional classrooms remain important because they provide direct human interaction. For this reason, I believe that the most effective approach is to use both forms of education together.",
         ],
       },
+      {
+        task: "Task 1 · Line graph",
+        title: "Urban Population in Four Asian Countries, 1970–2040",
+        paragraphs: [
+          "The line graph compares the percentages of people living in cities in four Asian countries—the Philippines, Malaysia, Thailand and Indonesia—between 1970 and 2020, with forecasts for 2030 and 2040.",
+          "Overall, the proportion of urban residents increased in all four countries, although the Philippines experienced a temporary decline after 1990. Malaysia recorded the highest figure from 2000 onwards, while Indonesia experienced the fastest growth and is projected to have the second-highest percentage by 2040.",
+          "In 1970, the Philippines and Malaysia had similar figures, at approximately 32% and 30%, respectively. The proportion in the Philippines rose to a peak of around 48% in 1990 before falling to about 43% in 2010. It then recovered to approximately 46% in 2020 and is forecast to reach 56% by 2040. By contrast, Malaysia’s figure climbed consistently, reaching 60% in 2000 and 75% in 2020. It is predicted to exceed 80% by 2040.",
+          "Thailand’s proportion increased gradually from about 18% in 1970 to 30% in 1990, after which it remained relatively stable until 2020. It is forecast to rise to almost 50% by 2040. Indonesia, meanwhile, saw a sharp increase from around 13% in 1970 to just over 50% in 2020 and is projected to reach approximately 64% by the end of the period.",
+        ],
+      },
+      {
+        task: "Task 1 · Line graph",
+        title: "Public Transport Use Among Commuters, 2000–2025",
+        paragraphs: [
+          "The line graph compares the percentages of commuters using public transport to travel to work in four cities between 2000 and 2025.",
+          "Overall, public transport use increased in all four cities, although City D declined slightly during the first decade. Cities A and C recorded the largest overall increases, with City A eventually becoming the highest, while City D saw the smallest increase.",
+          "In 2000, City B had the highest figure, at 48%, compared with 32% for City A. Both figures rose thereafter, but City A increased more rapidly, narrowing the gap and overtaking City B by 2020. By 2025, the figures had reached 68% and 63%, respectively.",
+          "City D, by contrast, fell slightly from 40% in 2000 to 38% in 2010 before recovering gradually to 47% in 2025. City C followed a much stronger upward trend, rising steadily from just 25% to 59%. It overtook City D between 2010 and 2015 and ended the period with more than double its initial figure.",
+        ],
+      },
+      {
+        task: "Task 2 · Opinion essay",
+        title: "Online News and Trusted Journalists",
+        paragraphs: [
+          "The internet has changed how people get their news, and some argue that online reports cannot be trusted, so readers should rely only on recognized journalists. I disagree with this absolute view. Professional training can improve reporting, but reliability depends on evidence and transparency rather than a journalist's title.",
+          "Online news does pose real risks. Anyone can publish a story immediately without checking the facts, and misleading posts can spread widely before they are corrected. This is especially concerning when readers rely on short videos or social media posts without checking the original source. Established news organisations often have editors and correction procedures, which can make their reports more dependable. They may also have the resources to investigate claims and contact the people involved before publication. For this reason, professional journalists remain valuable.",
+          "However, they should not be the only voices we trust. Journalists and large media organisations can also be influenced by political or commercial interests. Independent writers and local witnesses may provide information that traditional outlets overlook. For example, a first-hand account supported by photos, dates and other verifiable evidence may be more trustworthy than an unsupported claim in a major newspaper. Readers should therefore compare several sources and check the evidence behind each claim. They can look for original documents and see whether an independent outlet confirms the story.",
+          "In conclusion, online news is not automatically unreliable, and professional journalists are not automatically correct. I disagree that we should trust only recognized journalists. We should judge each report by how well its claims can be verified.",
+        ],
+      },
     ],
   },
 
