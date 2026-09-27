@@ -5,6 +5,7 @@
   const app = document.querySelector("#app");
   const navigation = document.querySelector("#navigation");
   const validRoutes = new Set(content.navigation.map((item) => item.route));
+  let activeWritingTab = "reviews";
 
   const icons = {
     home: '<path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10.5V20h13v-9.5M9 20v-6h6v6"/>',
@@ -349,8 +350,59 @@
     }
   });
 
+  function activateWritingTab(tabName, shouldFocus = false) {
+    const tabs = [...app.querySelectorAll("[data-writing-tab]")];
+    const panels = [...app.querySelectorAll("[data-writing-panel]")];
+    const selectedTab = tabs.find((tab) => tab.dataset.writingTab === tabName);
+    if (!selectedTab) return;
+
+    activeWritingTab = tabName;
+    tabs.forEach((tab) => {
+      const isSelected = tab === selectedTab;
+      tab.classList.toggle("is-active", isSelected);
+      tab.setAttribute("aria-selected", String(isSelected));
+      tab.tabIndex = isSelected ? 0 : -1;
+    });
+    panels.forEach((panel) => {
+      panel.hidden = panel.dataset.writingPanel !== tabName;
+    });
+    if (shouldFocus) selectedTab.focus();
+  }
+
+  app.addEventListener("click", (event) => {
+    const tab = event.target.closest("[data-writing-tab]");
+    if (!tab) return;
+    activateWritingTab(tab.dataset.writingTab);
+  });
+
+  app.addEventListener("keydown", (event) => {
+    const tab = event.target.closest("[data-writing-tab]");
+    if (!tab || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const tabs = [...app.querySelectorAll("[data-writing-tab]")];
+    const currentIndex = tabs.indexOf(tab);
+    let nextIndex = currentIndex;
+    if (event.key === "ArrowRight") nextIndex = (currentIndex + 1) % tabs.length;
+    if (event.key === "ArrowLeft") nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+    if (event.key === "Home") nextIndex = 0;
+    if (event.key === "End") nextIndex = tabs.length - 1;
+    activateWritingTab(tabs[nextIndex].dataset.writingTab, true);
+  });
+
   function renderWriting() {
     const section = content.writing;
+    const tabs = [
+      ["reviews", "첨삭"],
+      ["toolkit", "표현표"],
+      ["vocabulary", "단어장"],
+      ["structure", "글쓰기 구조"],
+      ["models", "모범답안"],
+    ];
+    const tabButtons = tabs.map(([id, label]) => {
+      const isActive = id === activeWritingTab;
+      return `<button class="writing-tab ${isActive ? "is-active" : ""}" id="writing-tab-${id}" type="button" role="tab" aria-selected="${isActive}" aria-controls="writing-panel-${id}" tabindex="${isActive ? "0" : "-1"}" data-writing-tab="${id}">${label}</button>`;
+    }).join("");
+    const tabPanel = (id, body) => `<section class="writing-tab-panel" id="writing-panel-${id}" role="tabpanel" aria-labelledby="writing-tab-${id}" data-writing-panel="${id}" ${id === activeWritingTab ? "" : "hidden"}>${body}</section>`;
     const tasks = section.tasks
       .map(
         (task) => `
@@ -379,20 +431,23 @@
 
     return `
       ${pageHeader("Writing essentials", section.title, section.description)}
-      ${renderWritingReviews(section)}
-      ${renderTaskOneToolkit(section.taskOneToolkit)}
-      ${renderTaskOneVocabulary(section.taskOneVocabulary)}
-      ${renderWritingPhraseBank(section.phraseBank)}
-      <div class="writing-principle">${section.principle}</div>
-      <div class="writing-grid">${tasks}</div>
-      <p class="writing-routine"><strong>Practice:</strong> ${section.routine}</p>
-      <section class="section-block" aria-labelledby="writing-models-heading">
+      <nav class="writing-tabs" role="tablist" aria-label="Writing archive sections">${tabButtons}</nav>
+      ${tabPanel("reviews", renderWritingReviews(section))}
+      ${tabPanel("toolkit", renderTaskOneToolkit(section.taskOneToolkit))}
+      ${tabPanel("vocabulary", renderTaskOneVocabulary(section.taskOneVocabulary))}
+      ${tabPanel("structure", `
+        ${renderWritingPhraseBank(section.phraseBank)}
+        <div class="writing-principle">${section.principle}</div>
+        <div class="writing-grid">${tasks}</div>
+        <p class="writing-routine"><strong>Practice:</strong> ${section.routine}</p>
+      `)}
+      ${tabPanel("models", `<section class="section-block" aria-labelledby="writing-models-heading">
         <div class="section-heading">
           <div><span class="eyebrow">Saved answers</span><h2 id="writing-models-heading">Model answers</h2></div>
           <span class="section-count">${section.models.length} answers</span>
         </div>
         <div class="writing-model-list">${models}</div>
-      </section>`;
+      </section>`)}`;
   }
 
   function renderListening() {
