@@ -398,6 +398,7 @@ window.IELTS_CONTENT = {
             { name: "그래프 소개", items: [
               { phrase: "The line graph shows …", meaning: "라인그래프는 …을 보여준다", examples: ["The line graph shows changes in the percentage of commuters using public transport."] },
               { phrase: "The line graph compares …", meaning: "라인그래프는 …을 비교한다", examples: ["The line graph compares the percentages of commuters using public transport in four cities."] },
+              { phrase: "The bar chart compares …", meaning: "막대그래프는 …을 비교한다", examples: ["The bar chart compares the percentages of households owning four types of electronic devices in 2005 and 2025."] },
               { phrase: "The chart illustrates changes in …", meaning: "차트는 …의 변화를 보여준다", examples: ["The chart illustrates changes in the proportion of people living in cities."] },
             ] },
             { name: "측정 대상", items: [
@@ -440,11 +441,14 @@ window.IELTS_CONTENT = {
             ] },
             { name: "가장 큰·작은 변화", items: [
               { phrase: "recorded the largest overall increase", meaning: "가장 큰 전체 증가폭을 기록했다", examples: ["City A recorded the largest overall increase, rising from 32% to 68%."] },
+              { phrase: "recorded by far the largest increase", meaning: "단연 가장 큰 증가폭을 기록했다", examples: ["Tablets recorded by far the largest increase among the four devices."] },
               { phrase: "saw the smallest overall increase", meaning: "가장 작은 전체 증가폭을 보였다", examples: ["City D saw the smallest overall increase, at only seven percentage points."] },
               { phrase: "experienced the fastest growth", meaning: "가장 빠른 성장을 보였다", examples: ["Indonesia experienced the fastest growth among the four countries."] },
               { phrase: "showed the sharpest decline", meaning: "가장 급격한 감소를 보였다", examples: ["Private renting showed the sharpest decline over the period."] },
             ] },
             { name: "최고·최저와 순위 변화", items: [
+              { phrase: "rankings remained unchanged", meaning: "순위가 변하지 않았다", examples: ["Although ownership rose for every device, the rankings remained unchanged."] },
+              { phrase: "the most widely owned device", meaning: "가장 널리 보유된 기기", examples: ["Television was the most widely owned device in both years."] },
               { phrase: "remained the highest / lowest", meaning: "계속 가장 높았다 / 낮았다", examples: ["Malaysia remained the highest from 2000 onwards.", "City D remained the lowest after being overtaken by City C."] },
               { phrase: "had the highest figure initially", meaning: "처음에는 가장 높은 수치를 기록했다", examples: ["The Philippines had the highest figure initially."] },
               { phrase: "finished with the highest figure", meaning: "가장 높은 수치로 마쳤다", examples: ["City A finished with the highest figure, at 68%."] },
@@ -472,9 +476,11 @@ window.IELTS_CONTENT = {
             { name: "증가", items: [
               { phrase: "rose / increased / grew", meaning: "상승했다 / 증가했다 / 성장했다", examples: ["City A rose from 32% to 68%.", "Malaysia's figure increased considerably after 1990.", "Indonesia grew rapidly between 2000 and 2020."] },
               { phrase: "climbed sharply", meaning: "급격히 상승했다", examples: ["The figure climbed sharply from 45% in 1990 to 60% in 2000."] },
+              { phrase: "climbed from just A to B", meaning: "불과 A에서 B까지 상승했다", examples: ["Tablet ownership climbed from just 8% to 72%."] },
               { phrase: "showed an upward trend", meaning: "상승 추세를 보였다", examples: ["All four cities showed an upward trend overall."] },
               { phrase: "recorded an increase", meaning: "증가를 기록했다", examples: ["City C recorded an increase of 34 percentage points."] },
               { phrase: "rose slightly / gradually / steadily", meaning: "소폭 / 점진적으로 / 꾸준히 상승했다", examples: ["The figure rose slightly to 34% in 1980.", "Thailand's proportion rose gradually to 33% in 2020.", "City C rose steadily throughout the period."] },
+              { phrase: "rose only slightly to X%", meaning: "X%까지 소폭 상승하는 데 그쳤다", examples: ["Television ownership rose only slightly from 92% to 96%."] },
               { phrase: "increased considerably / rapidly", meaning: "상당히 / 빠르게 증가했다", examples: ["Malaysia's figure increased considerably after 1990.", "Indonesia increased rapidly from 2000 onwards."] },
             ] },
             { name: "감소·최고점·회복", items: [
@@ -490,6 +496,7 @@ window.IELTS_CONTENT = {
             { name: "수치 연결", items: [
               { phrase: "rose from A to B", meaning: "A에서 B까지 상승했다", examples: ["City A rose from 32% in 2000 to 68% in 2025."] },
               { phrase: "rose by X percentage points", meaning: "X%포인트 상승했다", examples: ["The figure rose by 36 percentage points over the period."] },
+              { phrase: "increased by X percentage points to Y%", meaning: "X%포인트 증가하여 Y%가 되었다", examples: ["Mobile phone ownership increased by 34 percentage points to 95%."] },
               { phrase: "reaching X%", meaning: "X%에 도달하면서", examples: ["City A increased steadily, reaching 61% in 2020."] },
               { phrase: "an increase of X percentage points", meaning: "X%포인트의 증가", examples: ["This represented an increase of 36 percentage points."] },
             ] },
@@ -508,6 +515,7 @@ window.IELTS_CONTENT = {
               { phrase: "respectively", meaning: "각각", examples: ["Cities A and B reached 68% and 63%, respectively."] },
               { phrase: "the figure for A / that for B", meaning: "A의 수치 / B의 수치", examples: ["The figure for City A was higher than that for City B."] },
               { phrase: "similar to / twice as high as", meaning: "…과 비슷한 / …의 두 배인", examples: ["The figure for Thailand was similar to that for Indonesia in 2000.", "Malaysia's figure was almost twice as high as that for Thailand."] },
+              { phrase: "almost matching the figure for A", meaning: "A의 수치와 거의 비슷해지며", examples: ["Mobile phone ownership reached 95%, almost matching the figure for televisions."] },
             ] },
             { name: "격차와 추월", items: [
               { phrase: "narrowed the gap with A", meaning: "A와의 격차를 좁혔다", examples: ["City A grew more rapidly and gradually narrowed the gap with City B."] },
@@ -517,11 +525,14 @@ window.IELTS_CONTENT = {
               { phrase: "was overtaken by A", meaning: "A에게 추월당했다", examples: ["City D was overtaken by City C before 2015."] },
             ] },
             { name: "최종 수치와 순위", items: [
+              { phrase: "the most dramatic change was seen in A", meaning: "가장 극적인 변화는 A에서 나타났다", examples: ["The most dramatic change was seen in tablet ownership."] },
               { phrase: "ranked first / second", meaning: "1위 / 2위를 기록했다", examples: ["City A ranked first in 2025, while City B ranked second."] },
               { phrase: "finished in first place", meaning: "최종 1위를 기록했다", examples: ["City A finished in first place, at 68%."] },
               { phrase: "ended the period with the lowest figure", meaning: "가장 낮은 수치로 기간을 마쳤다", examples: ["City D ended the period with the lowest figure, at 47%."] },
               { phrase: "more than doubled", meaning: "두 배 이상 증가했다", examples: ["City C more than doubled from 25% to 59%."] },
               { phrase: "more than double its initial level", meaning: "초기 수준의 두 배 이상", examples: ["City C finished at more than double its initial level."] },
+              { phrase: "nine times as high as", meaning: "…의 아홉 배인", examples: ["Tablet ownership was nine times as high in 2025 as it had been in 2005."] },
+              { phrase: "the least commonly owned device", meaning: "가장 적게 보유된 기기", examples: ["Tablets remained the least commonly owned device in 2025."] },
             ] },
             { name: "예상치", items: [
               { phrase: "is expected to rise", meaning: "상승할 것으로 예상된다", examples: ["The figure is expected to rise further after 2020."] },
@@ -662,6 +673,16 @@ window.IELTS_CONTENT = {
           "Online news does pose real risks. Anyone can publish a story immediately without checking the facts, and misleading posts can spread widely before they are corrected. This is especially concerning when readers rely on short videos or social media posts without checking the original source. Established news organisations often have editors and correction procedures, which can make their reports more dependable. They may also have the resources to investigate claims and contact the people involved before publication. For this reason, professional journalists remain valuable.",
           "However, they should not be the only voices we trust. Journalists and large media organisations can also be influenced by political or commercial interests. Independent writers and local witnesses may provide information that traditional outlets overlook. For example, a first-hand account supported by photos, dates and other verifiable evidence may be more trustworthy than an unsupported claim in a major newspaper. Readers should therefore compare several sources and check the evidence behind each claim. They can look for original documents and see whether an independent outlet confirms the story.",
           "In conclusion, online news is not automatically unreliable, and professional journalists are not automatically correct. I disagree that we should trust only recognized journalists. We should judge each report by how well its claims can be verified.",
+        ],
+      },
+      {
+        task: "Task 1 · Bar chart",
+        title: "Household Ownership of Electronic Devices, 2005 and 2025",
+        paragraphs: [
+          "The bar chart compares the percentages of households owning four types of electronic devices in a country in 2005 and 2025.",
+          "Overall, ownership increased for all four devices between 2005 and 2025, while their rankings remained unchanged. Television was the most widely owned device in both years, whereas tablets recorded by far the largest increase.",
+          "Television ownership was already very high in 2005, at 92%, and rose only slightly to 96% by 2025, remaining the highest of the four categories. Mobile phone ownership was considerably lower initially, at 61%, but increased by 34 percentage points to 95%, almost matching the figure for televisions by the end of the period.",
+          "Computer ownership also rose substantially, from 48% in 2005 to 83% in 2025, an increase of 35 percentage points. The most dramatic change, however, was seen in tablet ownership, which climbed from just 8% to 72%. Although tablets remained the least commonly owned device, the ownership rate was nine times as high in 2025 as it had been in 2005.",
         ],
       },
     ],
