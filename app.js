@@ -142,6 +142,7 @@
       .join("");
     return `
       ${pageHeader("Speaking notes", section.title, section.description)}
+      ${renderTemplateCollection(section.templates, "Speaking templates", "Answer frameworks", "speaking-templates-heading")}
       <div class="answer-list">${cards}</div>
       <section class="section-block" aria-labelledby="practice-heading">
         <div class="section-heading">
@@ -223,6 +224,25 @@
           ${section.items.map((item) => `<div class="phrase-stage-item"><strong lang="en">${escapeText(item.pattern)}</strong><p class="phrase-example" lang="en">${escapeText(item.example)}</p><p class="phrase-note">${escapeText(item.note)}</p></div>`).join("")}
         </div></div>`).join("")}
       </article>`).join("")}</div>
+    </section>`;
+  }
+
+  function renderTemplateCollection(templates, title, eyebrow, headingId) {
+    const items = templates.map((template, index) => `<details class="template-section" ${index === 0 ? "open" : ""}>
+      <summary><span><small>${String(index + 1).padStart(2, "0")}</small><strong>${escapeText(template.title)}</strong></span><i aria-hidden="true">+</i></summary>
+      <div class="template-section-body">
+        <p>${escapeText(template.description)}</p>
+        <div class="template-item-list">${template.items.map((item) => `<article class="template-item">
+          <span>${escapeText(item.label)}</span>
+          <strong lang="en">${escapeText(item.pattern)}</strong>
+          <p>${escapeText(item.note)}</p>
+        </article>`).join("")}</div>
+      </div>
+    </details>`).join("");
+    return `<section class="section-block template-collection" aria-labelledby="${headingId}">
+      <div class="section-heading"><div><span class="eyebrow">${escapeText(eyebrow)}</span><h2 id="${headingId}">${escapeText(title)}</h2></div><span class="section-count">${templates.length} sets</span></div>
+      <p class="section-intro">문장을 통째로 외우기보다 빈칸의 주제·대상·수치를 바꿔 반복해서 사용하세요.</p>
+      <div class="template-list">${items}</div>
     </section>`;
   }
 
@@ -395,6 +415,7 @@
       ["reviews", "첨삭"],
       ["toolkit", "표현표"],
       ["vocabulary", "단어장"],
+      ["templates", "템플릿"],
       ["structure", "글쓰기 구조"],
       ["models", "모범답안"],
     ];
@@ -435,6 +456,7 @@
       ${tabPanel("reviews", renderWritingReviews(section))}
       ${tabPanel("toolkit", renderTaskOneToolkit(section.taskOneToolkit))}
       ${tabPanel("vocabulary", renderTaskOneVocabulary(section.taskOneVocabulary))}
+      ${tabPanel("templates", renderTemplateCollection(section.templates, "Writing templates", "Ready-to-use frameworks", "writing-templates-heading"))}
       ${tabPanel("structure", `
         ${renderWritingPhraseBank(section.phraseBank)}
         <div class="writing-principle">${section.principle}</div>

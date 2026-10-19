@@ -144,6 +144,24 @@ h1, h2 { margin: 0; font-family: "Fraunces", serif; }
 .speaking-pack-phrases { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding-top: 3px; }
 .speaking-pack-phrases > span { margin-right: 4px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
 .speaking-pack-phrases strong { padding: 7px 10px; border: 1px solid #cad9cd; border-radius: 9px; color: var(--forest-dark); background: #f4f8f2; font-size: 11px; }
+.template-list { display: grid; gap: 12px; }
+.template-section { overflow: hidden; border: 1px solid var(--line); border-radius: 16px; background: var(--card); }
+.template-section > summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 19px 22px; cursor: pointer; list-style: none; }
+.template-section > summary::-webkit-details-marker { display: none; }
+.template-section > summary:hover { background: #faf6ef; }
+.template-section > summary:focus-visible { outline: 2px solid var(--forest); outline-offset: -2px; }
+.template-section > summary span { display: flex; align-items: center; gap: 14px; }
+.template-section > summary small { color: var(--clay); font-family: "Fraunces", serif; font-size: 15px; }
+.template-section > summary strong { font-family: "Fraunces", serif; font-size: 19px; line-height: 1.35; }
+.template-section > summary i { color: var(--forest); font-size: 22px; font-style: normal; transition: transform .2s ease; }
+.template-section[open] > summary i { transform: rotate(45deg); }
+.template-section-body { padding: 5px 22px 24px; border-top: 1px solid var(--line); }
+.template-section-body > p { margin: 16px 0; color: #526158; font-size: 13px; line-height: 1.65; }
+.template-item-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px; }
+.template-item { min-width: 0; padding: 16px 17px; border-radius: 11px; background: var(--paper); }
+.template-item > span { display: block; margin-bottom: 8px; color: var(--clay); font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.template-item > strong { display: block; color: var(--forest-dark); font-size: 14px; line-height: 1.65; overflow-wrap: anywhere; }
+.template-item > p { margin: 9px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
 .prompt-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .prompt-card { padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--card); }
 .prompt-card span { color: var(--clay); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
@@ -429,6 +447,10 @@ h1, h2 { margin: 0; font-family: "Fraunces", serif; }
   .vocab-stage > summary strong { font-size: 17px; }
   .vocab-stage-body { padding: 4px 16px 20px; }
   .vocab-grid { grid-template-columns: 1fr; }
+  .template-item-list { grid-template-columns: 1fr; }
+  .template-section > summary { padding: 17px; }
+  .template-section > summary strong { font-size: 17px; }
+  .template-section-body { padding: 4px 16px 20px; }
   .toolkit-practice { padding: 18px; }
   .toolkit-practice-card > summary { grid-template-columns: 1fr 20px; gap: 8px; }
   .toolkit-practice-card > summary span { grid-column: 1; }

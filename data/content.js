@@ -19,6 +19,62 @@ window.IELTS_CONTENT = {
   speaking: {
     title: "Speaking",
     description: "Finalized Part 1 answers to revisit and practise aloud.",
+    templates: [
+      {
+        title: "시험 시작 · 짧고 자연스럽게",
+        description: "인사와 기본 정보는 길게 만들지 말고 자연스럽고 정확한 문장으로 답합니다.",
+        items: [
+          { label: "Greeting", pattern: "Hi. / Hello.", note: "Good afternoon처럼 지나치게 격식 있게 시작할 필요는 없습니다." },
+          { label: "Name", pattern: "You can call me by my English name, [name].", note: "call me by my English name에서 by를 빠뜨리지 않습니다." },
+          { label: "Hometown", pattern: "I’m from [city], which is in the [area] of [country].", note: "짧은 관계절로 위치 정보를 자연스럽게 덧붙입니다." },
+          { label: "Current home", pattern: "I’m originally from [place], but I’ve been living in [place] for [time].", note: "과거부터 지금까지 계속 사는 경우 현재완료진행형을 씁니다." },
+          { label: "ID", pattern: "Sure, here you are.", note: "신분증을 건넬 때 사용할 수 있는 간단한 표현입니다." },
+        ],
+      },
+      {
+        title: "Part 1 · 약 20초 답변 공식",
+        description: "Answer → Reason → Example 또는 Comparison 순서로 2~3문장을 만듭니다.",
+        items: [
+          { label: "Answer", pattern: "Yes, I do. / No, not really. / I usually …", note: "첫 문장에서 질문에 바로 답합니다." },
+          { label: "Reason", pattern: "That’s mainly because …", note: "이유 하나만 분명하게 설명합니다." },
+          { label: "Example", pattern: "For example, this week I’m …", note: "짧고 구체적인 예시로 답을 확장합니다." },
+          { label: "Contrast", pattern: "I usually …, but I rarely … because …", note: "평소 습관과 예외를 대비합니다." },
+          { label: "Past / Future", pattern: "I used to …, but now … / When I …, I’ll …", note: "과거 또는 미래와 비교하면 시제 범위를 자연스럽게 보여줄 수 있습니다." },
+        ],
+      },
+      {
+        title: "Part 1 · 선택해서 쓰는 자연스러운 표현",
+        description: "한 답변에 하나만 골라 문맥에 맞을 때 사용합니다. 억지로 이디엄을 넣지 않습니다.",
+        items: [
+          { label: "Likes", pattern: "What I like most about it is … / I can’t get enough of it.", note: "좋아하는 대상과 구체적인 이유를 연결합니다." },
+          { label: "Ability", pattern: "I have a knack for it. / I’m hopeless at it.", note: "잘하거나 잘하지 못하는 일을 말합니다." },
+          { label: "Frequency", pattern: "More often than not, … / Every once in a while, …", note: "대부분의 경우 또는 가끔이라는 빈도를 표현합니다." },
+          { label: "Opinion", pattern: "My take on this is … / To my way of thinking, …", note: "개인적인 견해를 자연스럽게 시작합니다." },
+          { label: "Difficult topic", pattern: "I can’t quite get my head around it.", note: "잘 이해하기 어려운 주제라는 뜻입니다." },
+        ],
+      },
+      {
+        title: "Part 2 · 1분 준비와 2분 말하기",
+        description: "준비 시간에는 완전한 문장 대신 이야기 흐름을 떠올릴 키워드와 why의 근거를 적습니다.",
+        items: [
+          { label: "Opening", pattern: "The person I’m going to talk about is …", note: "첫 10~20초 안에 사람·장소·경험을 명확히 밝힙니다." },
+          { label: "No exact example", pattern: "I can’t think of [exact topic], so I’m going to tell you about [related topic].", note: "거짓말을 억지로 만들기보다 질문과 가까운 방향으로 전환합니다." },
+          { label: "Thinking time", pattern: "I don’t know how best to explain this because it’s quite complicated.", note: "잠깐 생각할 시간을 확보하면서도 답변을 이어갑니다." },
+          { label: "Evaluation", pattern: "It was hands down the best … / It was a cut above the rest.", note: "강한 긍정 평가가 실제 경험과 맞을 때만 사용합니다." },
+        ],
+      },
+      {
+        title: "Part 3 · 여러 관점에서 내 입장으로",
+        description: "다른 집단의 관점을 짧게 비교한 뒤 자신의 판단과 이유로 마무리합니다.",
+        items: [
+          { label: "Viewpoint structure", pattern: "Some people would say …, whereas others would argue … . Personally, I think …", note: "찬반을 나열한 뒤 내 입장을 분명히 합니다." },
+          { label: "Cause and result", pattern: "If people …, they might …", note: "조건과 가능한 결과를 연결합니다." },
+          { label: "Parallel change", pattern: "The more …, the more …", note: "두 변화가 함께 커지는 관계를 설명합니다." },
+          { label: "Add a thought", pattern: "…, which is important because … / …, which can lead to …", note: "which로 앞 문장에 설명이나 결과를 덧붙입니다." },
+          { label: "Limited knowledge", pattern: "I don’t know very much about this topic, but I think …", note: "잘 모르는 주제에서도 아는 범위 안에서 논리를 이어갑니다. Speaking에서는 In conclusion으로 끝내지 않습니다." },
+        ],
+      },
+    ],
     answers: [
       {
         question: "Talk about your family.",
@@ -195,6 +251,70 @@ window.IELTS_CONTENT = {
     title: "Writing",
     description: "Simple, clear, accurate writing for Band 7.0.",
     principle: "Accuracy first, complexity second. Learn useful chunks, not whole model answers.",
+    templates: [
+      {
+        title: "Academic Task 1 · 4문단 기본 틀",
+        description: "Introduction 1문장 → Overview 2문장 안팎 → Detail 1 → Detail 2 순서로 씁니다.",
+        items: [
+          { label: "1 · Introduction", pattern: "The [chart type] compares / illustrates [what] in [place] between [year] and [year].", note: "문제 문장을 바꿔 쓰되 line graph, bar chart, table 같은 자료 유형은 정확히 유지합니다." },
+          { label: "2 · Overview", pattern: "Overall, A showed an upward trend, while B declined over the period.", note: "세부 숫자는 빼고 전체 방향, 최고·최저, 예외나 가장 큰 변화 중 2~4개를 고릅니다." },
+          { label: "3 · Detail 1", pattern: "In terms of A, X stood at [number], compared with [number] for Y.", note: "서로 관련된 대상끼리 묶고 정확한 수치를 넣습니다." },
+          { label: "4 · Detail 2", pattern: "A and B finished at [number] and [number], respectively.", note: "남은 대상의 흐름과 최종 수치를 직접 비교합니다." },
+        ],
+      },
+      {
+        title: "Academic Task 1 · 수치와 변화",
+        description: "정확한 값, 변화량, 근삿값을 구분해서 표현합니다.",
+        items: [
+          { label: "Approximation", pattern: "just over / just under / around / almost [number]", note: "그래프 선이 정확한 눈금에 닿지 않을 때 사용합니다." },
+          { label: "Start and end", pattern: "The figure increased from 65% to 70%.", note: "from A to B는 시작값과 끝값입니다." },
+          { label: "Amount of change", pattern: "The figure increased by 5 percentage points.", note: "by는 변화량입니다. 퍼센트 수치의 차이는 percentage points가 정확합니다." },
+          { label: "Fractions", pattern: "25% = a quarter / one in four · 66% ≈ two thirds", note: "같은 숫자를 반복하지 않도록 일부 수치를 자연스럽게 바꿔 말합니다." },
+          { label: "Strong movement", pattern: "soared / skyrocketed · plummeted / plunged · hovered at around · levelled off", note: "급등·급락은 실제 변화가 클 때만 쓰고, hover와 level off는 안정적인 흐름에 씁니다." },
+        ],
+      },
+      {
+        title: "Academic Task 1 · Process diagram",
+        description: "수동태와 순서 표현을 사용해 단계가 어떻게 이어지는지 설명합니다.",
+        items: [
+          { label: "Sequence", pattern: "Once the bottles have been selected, they are compressed and subsequently sent through …", note: "Once, after, before, subsequently로 단계의 순서를 연결합니다." },
+          { label: "Passive voice", pattern: "The material is collected, sorted and transported to the factory.", note: "행위자보다 공정 자체가 중요하므로 수동태를 기본으로 사용합니다." },
+        ],
+      },
+      {
+        title: "Task 2 · Introduction과 PEEL 본론",
+        description: "서론에서 질문을 바꿔 쓰고 입장을 밝힌 뒤, 본론 한 문단에는 핵심 생각 하나만 전개합니다.",
+        items: [
+          { label: "Introduction", pattern: "Some people argue that A, while others believe B. While A has some benefits, I believe that B …", note: "2~3문장 안에 주제와 입장을 분명히 제시합니다. 두 질문형 문제라면 두 질문 모두에 답합니다." },
+          { label: "P · Point", pattern: "One major reason is that …", note: "문단의 핵심 주장을 첫 문장에 씁니다." },
+          { label: "E · Example", pattern: "For example, many …", note: "개인적인 사촌 이야기보다 여러 사람에게 적용되는 일반적인 예시가 안전합니다." },
+          { label: "E · Explain", pattern: "This means that … / As a result, …", note: "예시가 핵심 주장과 어떻게 연결되는지 설명합니다." },
+          { label: "L · Link", pattern: "Therefore, …", note: "문단의 주장을 질문이나 내 입장과 다시 연결합니다." },
+        ],
+      },
+      {
+        title: "Task 2 · 유형과 문장 다양성",
+        description: "유형에 맞는 구조를 먼저 선택하고, 복잡한 문법은 정확하게 쓸 수 있는 만큼만 사용합니다.",
+        items: [
+          { label: "Discuss both views", pattern: "On the one hand, … / On the other hand, …", note: "두 본론에서 각 관점을 설명한 뒤 자신의 입장을 일관되게 유지합니다." },
+          { label: "Advantages and disadvantages", pattern: "This development has several benefits, but it also has important drawbacks.", note: "외운 티가 나는 안내 문장보다 실제 장점과 단점을 바로 예고합니다." },
+          { label: "Problem and solution", pattern: "One major cause is … . A practical solution would be …", note: "원인 1~2개를 고르고 각 원인에 대응하는 해결책을 제시합니다." },
+          { label: "Complex sentence", pattern: "Although A may benefit, B could suffer because …", note: "although, so that, which, if를 사용하되 주어와 동사 관계를 정확히 유지합니다." },
+          { label: "Condition", pattern: "If the government had acted earlier, the problem might not be as serious today.", note: "조건문은 의미가 맞을 때 사용합니다. 연결어를 문장마다 넣지 않습니다." },
+          { label: "Conclusion", pattern: "In conclusion, although A …, I believe B because …", note: "새 아이디어 없이 핵심 이유와 최종 입장을 짧게 다시 씁니다." },
+        ],
+      },
+      {
+        title: "General Task 1 · Letter",
+        description: "각 bullet point를 한 문단씩 다루고 세 문단의 길이를 비슷하게 맞춥니다.",
+        items: [
+          { label: "Informal opening", pattern: "It’s so great to hear from you again! Thank you so much for …", note: "비격식 편지에서는 축약형과 자연스러운 느낌표 한 번 정도를 사용할 수 있습니다." },
+          { label: "Informal refusal", pattern: "It’s very kind of you, but unfortunately I won’t be able to make it because of …", note: "감사를 먼저 표현한 뒤 이유를 간단히 설명합니다." },
+          { label: "Informal request", pattern: "Could you let me know another time that would work? I can’t wait to hear from you.", note: "다음 행동을 구체적으로 요청하며 마무리합니다." },
+          { label: "Formal request", pattern: "Dear Sir or Madam, … Would it be possible to arrange alternative accommodation immediately? … Yours faithfully,", note: "격식 편지에서는 직접 명령하기보다 정중한 요청형을 사용합니다." },
+        ],
+      },
+    ],
     reviewPreview: [
       "Many people ",
       { original: "uses", replacement: "use", category: "문법", reason: "주어 people은 복수이므로 use를 씁니다." },
